@@ -1,0 +1,20 @@
+/* ═══════════════════════════════════════════════════════════════
+   style.css — Feuille principale
+   Transports Publics · Yverdon-les-Bains
+   Importe tous les sous-fichiers CSS dans l'ordre de cascade.
+═══════════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap');
+
+@import './styles/tokens.css';
+@import './styles/base.css';
+@import './styles/header.css';
+@import './styles/main.css';
+@import './styles/footer.css';
+
+/* Visualisations — à décommenter au fur et à mesure */
+@import './styles/relations.css';
+@import './styles/departures.css';
+@import './styles/travel_time.css';
+/* @import './styles/visu2.css'; */
+/* @import './styles/visu3.css'; */

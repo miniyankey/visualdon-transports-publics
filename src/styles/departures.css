@@ -1,0 +1,265 @@
+/* ─── visu2.css — Carte de réseau ────────────────────────────── */
+
+.visu2-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background: var(--color-bg);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+}
+
+/* ── Zone SVG ── */
+
+.visu2-svg-wrap {
+  width: 100%;
+}
+
+/* ── Légende HTML (en dessous du SVG, jamais superposée) ── */
+
+.visu2-legend-bar {
+  display: flex;
+  gap: 20px;
+  padding: 8px 14px;
+  border-top: 1px solid var(--color-border);
+  background: var(--color-bg);
+}
+
+.visu2-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-main);
+  font-size: 11px;
+  color: var(--color-muted);
+}
+
+.visu2-legend-line {
+  display: inline-block;
+  width: 20px;
+  height: 3px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.visu2-legend-line--solid  { background: #2d327d; }
+.visu2-legend-line--dashed { background: transparent; border-top: 3px dashed #c0c4cc; }
+
+/* ── Tooltip flottant ── */
+
+.visu2-tooltip {
+  position: absolute;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  padding: 12px 16px;
+  z-index: 20;
+  width: 260px;
+  pointer-events: auto;
+}
+
+.visu2-svg {
+  display: block;
+  width: 100%;
+}
+
+/* ── Lignes interactives ── */
+
+.visu2-line {
+  transition: opacity 150ms ease;
+}
+
+.visu2-line:hover {
+  opacity: 0.75;
+}
+
+/* ── Panneau de détail ── */
+
+.visu2-panel {
+  border-top: 1px solid var(--color-border);
+  padding: 20px 24px;
+  min-height: 60px;
+  background: var(--color-bg);
+}
+
+.visu2-panel-hint {
+  font-size: 13px;
+  color: var(--color-muted);
+  font-family: var(--font-main);
+  margin: 0;
+}
+
+.visu2-panel-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-left: 12px;
+}
+
+.visu2-panel-header .visu2-close {
+  margin-left: auto;
+}
+
+.visu2-line-badge {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-main);
+  font-weight: 700;
+  font-size: 11px;
+}
+
+.visu2-panel-title {
+  font-family: var(--font-main);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1.3;
+}
+
+/* ── Tableau ── */
+
+.visu2-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-main);
+  font-size: 12px;
+  margin-bottom: 14px;
+}
+
+.visu2-table th {
+  text-align: left;
+  font-weight: 600;
+  color: var(--color-muted);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 8px 6px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.visu2-table td {
+  padding: 6px 8px;
+  color: var(--color-text);
+  vertical-align: top;
+  border-bottom: 1px solid var(--color-border);
+  line-height: 1.4;
+}
+
+.visu2-year-cell {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.visu2-year-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+.visu2-absent {
+  color: var(--color-disabled);
+  font-style: italic;
+}
+
+/* ── Changements ── */
+
+.visu2-changes h4 {
+  font-family: var(--font-main);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 8px;
+}
+
+.visu2-changes ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.visu2-change {
+  font-family: var(--font-main);
+  font-size: 12px;
+  color: var(--color-text);
+  padding: 5px 10px;
+  border-radius: var(--radius-small);
+  background: #f8f9fa;
+  border-left: 3px solid var(--color-border);
+}
+
+.visu2-change--new      { border-left-color: var(--color-2026); }
+.visu2-change--removed  { border-left-color: var(--color-accent); }
+.visu2-change--rename   { border-left-color: var(--color-2016); }
+.visu2-change--dest     { border-left-color: var(--color-2006); }
+.visu2-change--terminus { border-left-color: var(--color-primary); }
+
+.visu2-no-change {
+  font-size: 12px;
+  color: var(--color-muted);
+  font-style: italic;
+  margin: 0 0 14px;
+  font-family: var(--font-main);
+}
+
+/* ── Bouton fermer ── */
+
+.visu2-close {
+  font-family: var(--font-main);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-muted);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  padding: 4px 12px;
+  cursor: pointer;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.visu2-close:hover {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+/* ── Responsive mobile ── */
+
+@media (max-width: 768px) {
+  #section-visu2.section-layout {
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+    gap: 24px;
+  }
+
+  #section-visu2 .section-text {
+    position: static;
+  }
+
+  #section-visu2 .section-viz {
+    width: 100%;
+    border-radius: var(--radius-small);
+  }
+}
+
+.visu2-side {
+  color: var(--color-muted);
+  font-size: 11px;
+}

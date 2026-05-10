@@ -1,0 +1,204 @@
+/* ─── main.css — Contenu principal et layout des sections ─────── */
+
+#main-content {
+  margin-top: var(--header-height);
+  min-height: calc(100vh - var(--header-height));
+}
+
+/* ── Layout commun à chaque section de visualisation ── */
+
+.section-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  align-items: start;
+  padding: 80px 60px;
+}
+
+.section-layout + .section-layout {
+  border-top: 1px solid var(--color-border);
+}
+
+/* ── Colonne texte (1/3) — wrapper avec boutons de navigation ── */
+
+.section-text-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.section-text {
+  position: sticky;
+  top: calc(var(--header-height) + 40px);
+}
+
+/* ── Boutons prev / next ── */
+
+.step-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-border);
+  background: transparent;
+  color: var(--color-primary);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.step-nav:hover:not(:disabled) {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+
+.step-nav:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+
+/* ── Transitions d'étape ── */
+
+.section-text {
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+
+.section-text.is-updating {
+  opacity: 0;
+  transform: translateY(6px);
+}
+
+.section-viz {
+  transition: opacity 200ms ease;
+}
+
+.section-viz.is-updating {
+  opacity: 0;
+}
+
+.section-text__label {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: 12px;
+}
+
+.section-text__title {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--color-primary);
+  line-height: 1.25;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.section-text__body {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-text);
+  line-height: 1.65;
+}
+
+.section-text__body p + p {
+  margin-top: 12px;
+}
+
+/* ── Colonne visualisation (2/3) ── */
+
+.section-viz {
+  background: #f8f9fa;
+  border-radius: var(--radius-card);
+  min-height: 400px;
+  overflow: hidden;
+}
+
+/* ─── Scroll stage (scrollytelling) ─────────────────────────── */
+
+.scroll-stage {
+  position: relative;
+}
+
+/* La section reste collée en haut pendant que les sentinelles défilent */
+.scroll-sticky {
+  position: sticky;
+  top: var(--header-height);
+  height: calc(100vh - var(--header-height));
+  overflow: hidden;
+}
+
+/* Dans le contexte sticky, section-text n'est plus re-sticky */
+.scroll-sticky .section-text {
+  position: static;
+}
+
+/* Le col occupe toute la hauteur de sa cellule de grille */
+.scroll-sticky .section-text-col {
+  height: 100%;
+  justify-content: center;
+}
+
+/* section-layout adapté à la hauteur sticky */
+.scroll-sticky.section-layout {
+  height: 100%;
+  padding: 40px 60px;
+  align-items: center;
+}
+
+/* La viz remplit la hauteur disponible et centre son contenu */
+.scroll-sticky .section-viz {
+  height: calc(100vh - var(--header-height) - 80px);
+  min-height: unset;
+  display: flex;
+  align-items: center;
+}
+
+/* Le sous-container de viz visible s'adapte à son contenu */
+.scroll-sticky .section-viz > div:not([hidden]) {
+  width: 100%;
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+/* Sentinelles : chacune crée un "palier" de scroll */
+.scroll-sentinel {
+  height: 50vh;
+}
+
+/* ─── Responsive ─────────────────────────────────────────────── */
+
+@media (max-width: 900px) {
+  .scroll-sticky.section-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    padding: 24px 20px;
+    gap: 20px;
+    align-items: start;
+    overflow-y: auto;
+  }
+
+  .scroll-sticky {
+    height: auto;
+    min-height: calc(100vh - var(--header-height));
+    overflow: visible;
+  }
+
+  .scroll-sticky .section-viz {
+    height: 50vw;
+    min-height: 280px;
+    max-height: 420px;
+  }
+
+  .scroll-sticky .section-text {
+    position: static;
+  }
+}

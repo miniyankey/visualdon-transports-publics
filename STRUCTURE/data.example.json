@@ -1,0 +1,397 @@
+[
+  {
+    "year": 2006,
+    "comments": {
+      "relations": {
+        "visu_name": "Relations journalières",
+        "title": "Ajout d'une ligne de train",
+        "content": "En 2025, les cff ont ajouté une ligne de train allant de Lausanne jusqu'à Grandson"
+      },
+      "departures": {
+        "visu_name": "Lignes au départ d'Yverdon-les-Bains, gare",
+        "title": "Changement d'horaire 2025",
+        "content": "Le changement d'horaire 2025 a enterré les lignes directe entre Genève et Zurich passant par Yverdon"
+      },
+      "travel_times": {
+        "visu_name": "Temps de parcours depuis Yverdon-les-Bains, gare",
+        "title": "Tendance à ralonger les temps de parcours",
+        "content": "La tendance est de ralonger les temps de parcours..."
+      }
+    },
+    "relations": [
+      {
+        "title": "Neuchâtel",
+        "courses": [
+          { "type": "train", "departure": "06:03", "arrival": "06:51" },
+          { "type": "train", "departure": "07:03", "arrival": "07:51" },
+          { "type": "train", "departure": "08:03", "arrival": "08:51" },
+          { "type": "train", "departure": "09:03", "arrival": "09:51" },
+          { "type": "train", "departure": "12:03", "arrival": "12:51" },
+          { "type": "train", "departure": "17:03", "arrival": "17:51" },
+          { "type": "train", "departure": "18:03", "arrival": "18:51" }
+        ]
+      },
+      {
+        "title": "Vallorbe",
+        "courses": [
+          { "type": "train", "departure": "06:15", "arrival": "06:45" },
+          { "type": "train", "departure": "08:15", "arrival": "08:45" },
+          { "type": "bus",   "departure": "10:20", "arrival": "10:50" },
+          { "type": "train", "departure": "14:15", "arrival": "14:45" },
+          { "type": "train", "departure": "18:15", "arrival": "18:45" }
+        ]
+      },
+      {
+        "title": "Orbe",
+        "courses": [
+          { "type": "bus", "departure": "06:10", "arrival": "06:32" },
+          { "type": "bus", "departure": "08:10", "arrival": "08:32" },
+          { "type": "bus", "departure": "12:10", "arrival": "12:32" },
+          { "type": "bus", "departure": "17:10", "arrival": "17:32" }
+        ]
+      },
+      {
+        "title": "Grandson",
+        "courses": [
+          { "type": "train", "departure": "06:03", "arrival": "06:15" },
+          { "type": "train", "departure": "07:03", "arrival": "07:15" },
+          { "type": "train", "departure": "08:03", "arrival": "08:15" },
+          { "type": "train", "departure": "12:03", "arrival": "12:15" },
+          { "type": "train", "departure": "17:03", "arrival": "17:15" },
+          { "type": "train", "departure": "18:03", "arrival": "18:15" }
+        ]
+      },
+      {
+        "title": "Thierrens",
+        "courses": [
+          { "type": "bus", "departure": "07:05", "arrival": "07:43" },
+          { "type": "bus", "departure": "12:05", "arrival": "12:43" },
+          { "type": "bus", "departure": "17:05", "arrival": "17:43" }
+        ]
+      }
+    ],
+    "departures": [
+      {
+        "id": 23065,
+        "name": "R2",
+        "color": "#EB0000",
+        "isYverdonTerminus": false,
+        "destinations": [
+          { "name": "Grandson / Murten", "side": "left" },
+          { "name": "Lausanne",          "side": "right" }
+        ]
+      },
+      {
+        "id": 10842,
+        "name": "IR15",
+        "color": "#EB0000",
+        "isYverdonTerminus": false,
+        "destinations": [
+          { "name": "Neuchâtel / Bienne", "side": "left" },
+          { "name": "Lausanne / Genève",  "side": "right" }
+        ]
+      },
+      {
+        "id": 56103,
+        "name": "613",
+        "color": "#EF0247",
+        "isYverdonTerminus": true,
+        "destinations": [
+          { "name": "Vallorbe / Le Brassus", "side": "right" },
+          { "name": "Yverdon, Gymnase",      "side": "left" }
+        ]
+      },
+      {
+        "id": 56101,
+        "name": "601",
+        "color": "#EF0247",
+        "isYverdonTerminus": true,
+        "destinations": [
+          { "name": "Orbe / Chavornay", "side": "right" }
+        ]
+      }
+    ],
+    "travel_times": [
+      { "destination": "Neuchâtel", "duration_minutes": 48 },
+      { "destination": "Vallorbe",  "duration_minutes": 30 },
+      { "destination": "Orbe",      "duration_minutes": 22 },
+      { "destination": "Grandson",  "duration_minutes": 12 },
+      { "destination": "Thierrens", "duration_minutes": 38 }
+    ]
+  },
+
+  {
+    "year": 2016,
+    "relations": [
+      {
+        "title": "Neuchâtel",
+        "courses": [
+          { "type": "train", "departure": "06:03", "arrival": "06:48" },
+          { "type": "train", "departure": "07:03", "arrival": "07:48" },
+          { "type": "train", "departure": "08:03", "arrival": "08:48" },
+          { "type": "train", "departure": "09:03", "arrival": "09:48" },
+          { "type": "train", "departure": "10:03", "arrival": "10:48" },
+          { "type": "train", "departure": "12:03", "arrival": "12:48" },
+          { "type": "train", "departure": "15:03", "arrival": "15:48" },
+          { "type": "train", "departure": "17:03", "arrival": "17:48" },
+          { "type": "train", "departure": "18:03", "arrival": "18:48" },
+          { "type": "train", "departure": "19:03", "arrival": "19:48" }
+        ]
+      },
+      {
+        "title": "Vallorbe",
+        "courses": [
+          { "type": "train", "departure": "06:15", "arrival": "06:43" },
+          { "type": "train", "departure": "07:15", "arrival": "07:43" },
+          { "type": "bus",   "departure": "09:20", "arrival": "09:48" },
+          { "type": "train", "departure": "12:15", "arrival": "12:43" },
+          { "type": "train", "departure": "14:15", "arrival": "14:43" },
+          { "type": "train", "departure": "17:15", "arrival": "17:43" },
+          { "type": "train", "departure": "18:15", "arrival": "18:43" }
+        ]
+      },
+      {
+        "title": "Orbe",
+        "courses": [
+          { "type": "bus", "departure": "06:10", "arrival": "06:32" },
+          { "type": "bus", "departure": "07:10", "arrival": "07:32" },
+          { "type": "bus", "departure": "08:10", "arrival": "08:32" },
+          { "type": "bus", "departure": "12:10", "arrival": "12:32" },
+          { "type": "bus", "departure": "17:10", "arrival": "17:32" },
+          { "type": "bus", "departure": "19:10", "arrival": "19:32" }
+        ]
+      },
+      {
+        "title": "Grandson",
+        "courses": [
+          { "type": "train", "departure": "06:03", "arrival": "06:14" },
+          { "type": "train", "departure": "07:03", "arrival": "07:14" },
+          { "type": "train", "departure": "08:03", "arrival": "08:14" },
+          { "type": "train", "departure": "09:03", "arrival": "09:14" },
+          { "type": "train", "departure": "12:03", "arrival": "12:14" },
+          { "type": "train", "departure": "17:03", "arrival": "17:14" },
+          { "type": "train", "departure": "18:03", "arrival": "18:14" },
+          { "type": "train", "departure": "19:03", "arrival": "19:14" }
+        ]
+      },
+      {
+        "title": "Thierrens",
+        "courses": [
+          { "type": "bus", "departure": "06:05", "arrival": "06:41" },
+          { "type": "bus", "departure": "07:05", "arrival": "07:41" },
+          { "type": "bus", "departure": "12:05", "arrival": "12:41" },
+          { "type": "bus", "departure": "17:05", "arrival": "17:41" },
+          { "type": "bus", "departure": "19:05", "arrival": "19:41" }
+        ]
+      }
+    ],
+    "departures": [
+      {
+        "id": 23065,
+        "name": "R2",
+        "color": "#EB0000",
+        "isYverdonTerminus": false,
+        "destinations": [
+          { "name": "Grandson / Murten", "side": "left" },
+          { "name": "Lausanne",          "side": "right" }
+        ]
+      },
+      {
+        "id": 10842,
+        "name": "IR15",
+        "color": "#EB0000",
+        "isYverdonTerminus": false,
+        "destinations": [
+          { "name": "Neuchâtel / Bienne", "side": "left" },
+          { "name": "Lausanne / Genève",  "side": "right" }
+        ]
+      },
+      {
+        "id": 56103,
+        "name": "613",
+        "color": "#EF0247",
+        "isYverdonTerminus": true,
+        "destinations": [
+          { "name": "Vallorbe / Le Brassus", "side": "right" },
+          { "name": "Yverdon, Gymnase",      "side": "left" }
+        ]
+      },
+      {
+        "id": 56101,
+        "name": "601",
+        "color": "#EF0247",
+        "isYverdonTerminus": true,
+        "destinations": [
+          { "name": "Orbe / Chavornay", "side": "right" }
+        ]
+      },
+      {
+        "id": 56105,
+        "name": "605",
+        "color": "#EF0247",
+        "isYverdonTerminus": false,
+        "destinations": [
+          { "name": "Grandson",         "side": "left" },
+          { "name": "Yverdon, Écuries", "side": "right" }
+        ]
+      }
+    ],
+    "travel_times": [
+      { "destination": "Neuchâtel", "duration_minutes": 45 },
+      { "destination": "Vallorbe",  "duration_minutes": 28 },
+      { "destination": "Orbe",      "duration_minutes": 22 },
+      { "destination": "Grandson",  "duration_minutes": 11 },
+      { "destination": "Thierrens", "duration_minutes": 36 }
+    ]
+  },
+
+  {
+    "year": 2026,
+    "relations": [
+      {
+        "title": "Neuchâtel",
+        "courses": [
+          { "type": "train", "departure": "05:33", "arrival": "06:16" },
+          { "type": "train", "departure": "06:03", "arrival": "06:46" },
+          { "type": "train", "departure": "06:33", "arrival": "07:16" },
+          { "type": "train", "departure": "07:03", "arrival": "07:46" },
+          { "type": "train", "departure": "07:33", "arrival": "08:16" },
+          { "type": "train", "departure": "08:03", "arrival": "08:46" },
+          { "type": "train", "departure": "09:03", "arrival": "09:46" },
+          { "type": "train", "departure": "10:03", "arrival": "10:46" },
+          { "type": "train", "departure": "12:03", "arrival": "12:46" },
+          { "type": "train", "departure": "15:03", "arrival": "15:46" },
+          { "type": "train", "departure": "17:03", "arrival": "17:46" },
+          { "type": "train", "departure": "17:33", "arrival": "18:16" },
+          { "type": "train", "departure": "18:03", "arrival": "18:46" },
+          { "type": "train", "departure": "19:03", "arrival": "19:46" },
+          { "type": "train", "departure": "20:03", "arrival": "20:46" }
+        ]
+      },
+      {
+        "title": "Vallorbe",
+        "courses": [
+          { "type": "train", "departure": "06:15", "arrival": "06:41" },
+          { "type": "train", "departure": "07:15", "arrival": "07:41" },
+          { "type": "train", "departure": "08:15", "arrival": "08:41" },
+          { "type": "bus",   "departure": "09:20", "arrival": "09:46" },
+          { "type": "train", "departure": "10:15", "arrival": "10:41" },
+          { "type": "train", "departure": "12:15", "arrival": "12:41" },
+          { "type": "train", "departure": "14:15", "arrival": "14:41" },
+          { "type": "train", "departure": "16:15", "arrival": "16:41" },
+          { "type": "train", "departure": "17:15", "arrival": "17:41" },
+          { "type": "train", "departure": "18:15", "arrival": "18:41" },
+          { "type": "train", "departure": "19:15", "arrival": "19:41" }
+        ]
+      },
+      {
+        "title": "Orbe",
+        "courses": [
+          { "type": "bus", "departure": "06:10", "arrival": "06:30" },
+          { "type": "bus", "departure": "07:10", "arrival": "07:30" },
+          { "type": "bus", "departure": "08:10", "arrival": "08:30" },
+          { "type": "bus", "departure": "09:10", "arrival": "09:30" },
+          { "type": "bus", "departure": "12:10", "arrival": "12:30" },
+          { "type": "bus", "departure": "17:10", "arrival": "17:30" },
+          { "type": "bus", "departure": "18:10", "arrival": "18:30" },
+          { "type": "bus", "departure": "19:10", "arrival": "19:30" }
+        ]
+      },
+      {
+        "title": "Grandson",
+        "courses": [
+          { "type": "train", "departure": "06:03", "arrival": "06:14" },
+          { "type": "train", "departure": "06:33", "arrival": "06:44" },
+          { "type": "train", "departure": "07:03", "arrival": "07:14" },
+          { "type": "train", "departure": "07:33", "arrival": "07:44" },
+          { "type": "train", "departure": "08:03", "arrival": "08:14" },
+          { "type": "train", "departure": "09:03", "arrival": "09:14" },
+          { "type": "train", "departure": "12:03", "arrival": "12:14" },
+          { "type": "train", "departure": "17:03", "arrival": "17:14" },
+          { "type": "train", "departure": "17:33", "arrival": "17:44" },
+          { "type": "train", "departure": "18:03", "arrival": "18:14" },
+          { "type": "train", "departure": "19:03", "arrival": "19:14" }
+        ]
+      },
+      {
+        "title": "Thierrens",
+        "courses": [
+          { "type": "bus", "departure": "06:05", "arrival": "06:39" },
+          { "type": "bus", "departure": "07:05", "arrival": "07:39" },
+          { "type": "bus", "departure": "08:05", "arrival": "08:39" },
+          { "type": "bus", "departure": "12:05", "arrival": "12:39" },
+          { "type": "bus", "departure": "17:05", "arrival": "17:39" },
+          { "type": "bus", "departure": "19:05", "arrival": "19:39" }
+        ]
+      }
+    ],
+    "departures": [
+      {
+        "id": 23065,
+        "name": "R2",
+        "color": "#EB0000",
+        "isYverdonTerminus": false,
+        "destinations": [
+          { "name": "Grandson / Murten", "side": "left" },
+          { "name": "Lausanne",          "side": "right" }
+        ]
+      },
+      {
+        "id": 10842,
+        "name": "IR15",
+        "color": "#EB0000",
+        "isYverdonTerminus": false,
+        "destinations": [
+          { "name": "Neuchâtel / Bienne", "side": "left" },
+          { "name": "Lausanne / Genève",  "side": "right" }
+        ]
+      },
+      {
+        "id": 56103,
+        "name": "613",
+        "color": "#EF0247",
+        "isYverdonTerminus": true,
+        "destinations": [
+          { "name": "Vallorbe / Le Brassus", "side": "right" },
+          { "name": "Yverdon, Gymnase",      "side": "left" }
+        ]
+      },
+      {
+        "id": 56101,
+        "name": "601",
+        "color": "#EF0247",
+        "isYverdonTerminus": true,
+        "destinations": [
+          { "name": "Orbe / Chavornay", "side": "right" }
+        ]
+      },
+      {
+        "id": 56105,
+        "name": "605",
+        "color": "#EF0247",
+        "isYverdonTerminus": false,
+        "destinations": [
+          { "name": "Grandson",         "side": "left" },
+          { "name": "Yverdon, Écuries", "side": "right" }
+        ]
+      },
+      {
+        "id": 74260,
+        "name": "60",
+        "color": "#FFCC00",
+        "isYverdonTerminus": false,
+        "destinations": [
+          { "name": "Thierrens / Moudon", "side": "right" },
+          { "name": "Yverdon, Gare Sud",  "side": "left" }
+        ]
+      }
+    ],
+    "travel_times": [
+      { "destination": "Neuchâtel", "duration_minutes": 43 },
+      { "destination": "Vallorbe",  "duration_minutes": 26 },
+      { "destination": "Orbe",      "duration_minutes": 20 },
+      { "destination": "Grandson",  "duration_minutes": 11 },
+      { "destination": "Thierrens", "duration_minutes": 34 }
+    ]
+  }
+]

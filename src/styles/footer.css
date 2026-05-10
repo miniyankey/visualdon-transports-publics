@@ -1,0 +1,46 @@
+/* ─── footer.css — Footer ────────────────────────────────────── */
+
+#site-footer {
+  border-top: 1px solid var(--color-border);
+  padding: 28px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-left__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.footer-left__text {
+  font-size: 12px;
+  color: var(--color-muted);
+  font-weight: 400;
+}
+
+.footer-left__text strong {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.footer-right {
+  font-size: 12px;
+  color: var(--color-muted);
+  text-align: right;
+}
+
+.footer-right__year {
+  font-weight: 600;
+  color: var(--color-primary);
+}

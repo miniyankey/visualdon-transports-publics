@@ -1,0 +1,115 @@
+/* ─── visu1.css — Diagramme des liaisons animées ─────────────── */
+
+.visu1-container {
+  position: relative;
+  width: 100%;
+  background: var(--color-bg);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  user-select: none;
+}
+
+/* ── SVG ── */
+
+.visu1-svg {
+  display: block;
+  width: 100%;
+}
+
+/* ── Véhicules ── */
+
+.visu1-vehicle {
+  cursor: pointer;
+  transition: opacity 150ms ease;
+}
+
+.visu1-vehicle:hover {
+  opacity: 0.8;
+}
+
+/* ── Contrôles (play/pause + horloge) ── */
+
+.visu1-controls {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  padding: 5px 12px 5px 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  backdrop-filter: blur(4px);
+}
+
+/* Bouton play/pause */
+
+.visu1-playbtn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-primary);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  flex-shrink: 0;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.visu1-playbtn:hover {
+  background: #1e2260;
+  transform: scale(1.08);
+}
+
+.visu1-playbtn svg {
+  width: 14px;
+  height: 14px;
+  display: block;
+}
+
+/* Horloge simulée */
+
+.visu1-clock {
+  font-family: var(--font-main);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-primary);
+  letter-spacing: 0.04em;
+  min-width: 36px;
+  text-align: center;
+}
+
+/* ── Responsive mobile ── */
+
+@media (max-width: 768px) {
+  /* La section passe en colonne : texte au-dessus, viz en dessous */
+  #section-visu1.section-layout {
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+    gap: 24px;
+  }
+
+  /* Le texte n'est plus sticky sur mobile */
+  #section-visu1 .section-text {
+    position: static;
+  }
+
+  /* La viz prend toute la largeur */
+  #section-visu1 .section-viz {
+    width: 100%;
+    border-radius: var(--radius-small);
+  }
+
+  /* Les contrôles passent en bas de la viz pour ne pas gêner la lecture */
+  .visu1-controls {
+    top: auto;
+    bottom: 10px;
+    right: 10px;
+  }
+}

@@ -1,0 +1,119 @@
+/* ─── visu3.css — Graphique temps de trajet ──────────────────── */
+
+.visu3-container {
+    position: relative;
+    background: var(--color-bg);
+    border-radius: var(--radius-card);
+    overflow: visible;
+}
+
+.visu3-svg-wrap {
+    width: 100%;
+}
+
+.visu3-svg {
+    display: block;
+    width: 100%;
+    overflow: visible;
+}
+
+/* ── Barres ── */
+
+.visu3-bar {
+    transition: filter 120ms ease;
+}
+
+/* ── Tooltip ── */
+
+.visu3-tooltip {
+    position: absolute;
+    pointer-events: none;
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-medium);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+    padding: 10px 14px;
+    font-family: var(--font-main);
+    font-size: 12px;
+    color: var(--color-text);
+    z-index: 10;
+    min-width: 180px;
+    max-width: 260px;
+}
+
+.visu3-tt-dest {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 8px;
+}
+
+.visu3-tt-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 6px;
+}
+
+.visu3-tt-rows>div {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+}
+
+.visu3-tt-badge {
+    display: inline-block;
+    border-radius: var(--radius-pill);
+    padding: 1px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.visu3-tt-better {
+    color: #059669;
+    font-weight: 600;
+}
+
+.visu3-tt-worse {
+    color: #dc2626;
+    font-weight: 600;
+}
+
+.visu3-tt-same {
+    color: var(--color-muted);
+}
+
+.visu3-tt-absent {
+    color: var(--color-disabled);
+    font-style: italic;
+}
+
+.visu3-tt-hint {
+    font-size: 10px;
+    color: var(--color-muted);
+    border-top: 1px solid var(--color-border);
+    padding-top: 5px;
+    margin-top: 2px;
+}
+
+/* ── Responsive mobile ── */
+
+@media (max-width: 768px) {
+    #section-visu3.section-layout {
+        grid-template-columns: 1fr;
+        padding: 40px 20px;
+        gap: 24px;
+    }
+
+    #section-visu3 .section-text {
+        position: static;
+    }
+
+    #section-visu3 .section-viz {
+        width: 100%;
+        border-radius: var(--radius-small);
+        overflow: visible;
+    }
+}

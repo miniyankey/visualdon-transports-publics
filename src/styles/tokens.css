@@ -1,0 +1,34 @@
+/* ─── tokens.css — Variables CSS globales (design tokens) ───── */
+
+:root {
+  /* Marque */
+  --color-primary:   #2d327d;
+  --color-accent:    #eb0000;
+  --color-bg:        #ffffff;
+  --color-text:      #1a1a1a;
+  --color-muted:     #6b7280;
+  --color-disabled:  #c0c4cc;
+  --color-border:    #e5e7eb;
+
+  /* Années */
+  --color-2006: #00b4d8;
+  --color-2016: #52b788;
+  --color-2026: #c5e003;
+  --color-2036: #f4a261;
+
+  /* Typographie */
+  --font-main: 'Inter Tight', sans-serif;
+
+  /* Arrondis */
+  --radius-card:   20px;
+  --radius-pill:   9999px;
+  --radius-small:  8px;
+  --radius-medium: 12px;
+
+  /* Transitions */
+  --transition-default: 600ms ease-in-out;
+  --transition-fast:    200ms ease;
+
+  /* Layout */
+  --header-height: 64px;
+}

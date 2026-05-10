@@ -1,0 +1,115 @@
+/* ─── header.css — Header fixe et sélecteur d'années ─────────── */
+
+#site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  z-index: 100;
+}
+
+/* ── Brand ── */
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-brand__badge {
+  width: 32px;
+  height: 32px;
+  background: var(--color-primary);
+  border-radius: var(--radius-small);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.header-brand__badge svg {
+  width: 18px;
+  height: 18px;
+  fill: white;
+}
+
+.header-brand__title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-primary);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.header-brand__subtitle {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--color-muted);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+/* ── Sélecteur d'années ── */
+
+.year-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.year-selector__label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-muted);
+  margin-right: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.year-btn {
+  border-radius: var(--radius-pill);
+  border: 2px solid var(--color-disabled);
+  padding: 5px 16px;
+  font-family: var(--font-main);
+  font-weight: 500;
+  font-size: 13px;
+  cursor: pointer;
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast);
+  background: transparent;
+  color: var(--color-muted);
+  user-select: none;
+}
+
+.year-btn:hover:not(.is-active) {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.year-btn[data-year="2006"].is-active {
+  background: var(--color-2006);
+  border-color: var(--color-2006);
+  color: white;
+}
+
+.year-btn[data-year="2016"].is-active {
+  background: var(--color-2016);
+  border-color: var(--color-2016);
+  color: white;
+}
+
+.year-btn[data-year="2026"].is-active {
+  background: var(--color-2026);
+  border-color: var(--color-2026);
+  color: #1a1a1a;
+}

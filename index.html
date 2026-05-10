@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transports Publics — Yverdon-les-Bains</title>
+
+  <link rel="stylesheet" href="./src/style.css" />
+
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       HEADER FIXE
+  ════════════════════════════════════════════════════════════ -->
+  <header id="site-header" role="banner">
+
+    <div class="header-brand">
+      <div class="header-brand__badge" aria-hidden="true">
+        <!-- Icône train simplifiée -->
+        <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="5" width="16" height="10" rx="2"/>
+          <circle cx="5.5" cy="15.5" r="1.5"/>
+          <circle cx="14.5" cy="15.5" r="1.5"/>
+          <line x1="2" y1="9" x2="18" y2="9" stroke="#2d327d" stroke-width="1.2" fill="none"/>
+          <line x1="7" y1="5" x2="7" y2="9" stroke="#2d327d" stroke-width="1" fill="none"/>
+          <line x1="13" y1="5" x2="13" y2="9" stroke="#2d327d" stroke-width="1" fill="none"/>
+        </svg>
+      </div>
+      <div>
+        <div class="header-brand__title">Transports Publics · Yverdon-les-Bains</div>
+        <div class="header-brand__subtitle">Évolution 2006 – 2026</div>
+      </div>
+    </div>
+
+    <nav class="year-selector" role="navigation" aria-label="Sélection de l'année">
+      <span class="year-selector__label">Années</span>
+      <button class="year-btn" data-year="2006" aria-pressed="false">2006</button>
+      <button class="year-btn" data-year="2016" aria-pressed="false">2016</button>
+      <button class="year-btn" data-year="2026" aria-pressed="false">2026</button>
+    </nav>
+
+  </header>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       CONTENU PRINCIPAL (visualisations à venir)
+  ════════════════════════════════════════════════════════════ -->
+  <main id="main-content">
+    <!-- Les sections de visualisation seront insérées ici -->
+  </main>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════════════════════ -->
+  <footer id="site-footer" role="contentinfo">
+
+    <div class="footer-left">
+      <div class="footer-left__dot"></div>
+      <p class="footer-left__text">
+        Réalisé dans le cadre du cours VisualDon de la filière <a href="https://heig-vd.ch/formation/bachelor/ingenierie-des-medias">Ingénierie des Médias</a> ·
+        <strong><a href="https://heig-vd.ch">Haute École d'Ingénierie et de Gestion du Canton de Vaud (HEIG-VD)</a></strong>
+      </p>
+    </div>
+
+    <div class="footer-right">
+      <span class="footer-right__year">2026</span> · E. Bergeon, Y. Rochat
+    </div>
+
+  </footer>
+
+
+  <script src="./src/app.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+[
+    {
+        "year": 2006, //l'année du fichier
+        "travel_times": [ //toutes les durées par destination
+            { "destination": "Neuchâtel"/*la destination*/, "duration_minutes": 43 /*duree en minute*/ },
+            { "destination": "Vallorbe",  "duration_minutes": 26 },
+        ]
+        }
+]

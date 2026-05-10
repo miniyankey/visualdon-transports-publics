@@ -1,0 +1,1627 @@
+[
+  {
+    "year": 2006,
+    "comments": {
+      "relations":    { "visu_name": "Relations", "title": "Un réseau régional limité", "content": "En 2006, les liaisons au départ d'Yverdon se résument à quelques axes routiers desservis par bus. Les fréquences restent faibles et les destinations accessibles en transports publics sont peu nombreuses. La voiture demeure le mode de déplacement dominant dans la région." },
+      "departures":   { "visu_name": "Départs", "title": "Des horaires clairsemés", "content": "Le réseau de départs d'Yverdon-les-Bains en 2006 reflète une offre minimale : peu de lignes, des intervalles longs entre les départs et des plages horaires restreintes. Les premiers départs sont tardifs et la dernière course rentre tôt en soirée." },
+      "travel_times": { "visu_name": "Temps de trajet", "title": "Des correspondances chronophages", "content": "Sans cadence à l'heure ni garantie de correspondance, les temps de trajet vers les villes voisines sont nettement plus longs qu'en voiture. Un trajet vers Lausanne ou Berne peut nécessiter plusieurs changements et dépasser l'heure de voyage." }
+    },
+    "relations": [
+      {
+        "title": "Orbe",
+        "courses": [
+          { "type": "bus", "departure": "04:55", "arrival": "05:15" },
+          { "type": "bus", "departure": "05:30", "arrival": "05:54" },
+          { "type": "bus", "departure": "05:50", "arrival": "06:11" },
+          { "type": "bus", "departure": "06:31", "arrival": "06:55" },
+          { "type": "bus", "departure": "06:50", "arrival": "07:11" },
+          { "type": "bus", "departure": "07:05", "arrival": "07:26" },
+          { "type": "bus", "departure": "07:50", "arrival": "08:11" },
+          { "type": "bus", "departure": "08:50", "arrival": "09:14" },
+          { "type": "bus", "departure": "11:10", "arrival": "11:34" },
+          { "type": "bus", "departure": "12:10", "arrival": "12:34" },
+          { "type": "bus", "departure": "12:45", "arrival": "13:06" },
+          { "type": "bus", "departure": "13:30", "arrival": "13:54" },
+          { "type": "bus", "departure": "14:10", "arrival": "14:31" },
+          { "type": "bus", "departure": "15:30", "arrival": "15:51" },
+          { "type": "bus", "departure": "15:55", "arrival": "16:19" },
+          { "type": "bus", "departure": "16:15", "arrival": "16:39" },
+          { "type": "bus", "departure": "17:10", "arrival": "17:34" },
+          { "type": "bus", "departure": "17:30", "arrival": "17:54" },
+          { "type": "bus", "departure": "18:10", "arrival": "18:34" },
+          { "type": "bus", "departure": "18:45", "arrival": "19:09" },
+          { "type": "bus", "departure": "19:10", "arrival": "19:34" },
+          { "type": "bus", "departure": "20:10", "arrival": "20:34" }
+        ]
+      },
+      {
+        "title": "Thierrens",
+        "courses": [
+          { "type": "bus", "departure": "05:50", "arrival": "06:31" },
+          { "type": "bus", "departure": "06:10", "arrival": "06:44" },
+          { "type": "bus", "departure": "06:20", "arrival": "06:58" },
+          { "type": "bus", "departure": "07:00", "arrival": "07:37" },
+          { "type": "bus", "departure": "10:50", "arrival": "11:27" },
+          { "type": "bus", "departure": "12:10", "arrival": "12:57" },
+          { "type": "bus", "departure": "12:50", "arrival": "13:27" },
+          { "type": "bus", "departure": "15:30", "arrival": "16:07" },
+          { "type": "bus", "departure": "16:15", "arrival": "16:53" },
+          { "type": "bus", "departure": "17:10", "arrival": "17:56" },
+          { "type": "bus", "departure": "18:10", "arrival": "18:56" },
+          { "type": "bus", "departure": "19:10", "arrival": "19:56" }
+        ]
+      },
+      {
+        "title": "Ste-Croix",
+        "courses": [
+          { "type": "train", "departure": "05:28", "arrival": "06:03" },
+          { "type": "train", "departure": "06:12", "arrival": "06:48" },
+          { "type": "train", "departure": "07:12", "arrival": "07:48" },
+          { "type": "train", "departure": "08:12", "arrival": "08:48" },
+          { "type": "train", "departure": "09:12", "arrival": "09:48" },
+          { "type": "train", "departure": "10:12", "arrival": "10:48" },
+          { "type": "train", "departure": "11:12", "arrival": "11:48" },
+          { "type": "train", "departure": "12:12", "arrival": "12:48" },
+          { "type": "train", "departure": "13:12", "arrival": "13:48" },
+          { "type": "train", "departure": "14:12", "arrival": "14:48" },
+          { "type": "train", "departure": "15:12", "arrival": "15:48" },
+          { "type": "train", "departure": "16:12", "arrival": "16:48" },
+          { "type": "train", "departure": "17:12", "arrival": "17:48" },
+          { "type": "train", "departure": "18:12", "arrival": "18:48" },
+          { "type": "train", "departure": "19:12", "arrival": "19:48" },
+          { "type": "train", "departure": "20:12", "arrival": "20:48" },
+          { "type": "train", "departure": "21:56", "arrival": "22:31" },
+          { "type": "train", "departure": "23:12", "arrival": "23:48" }
+        ]
+      },
+      {
+        "title": "Echallens",
+        "courses": [
+          { "type": "bus", "departure": "06:23", "arrival": "06:53" },
+          { "type": "bus", "departure": "07:10", "arrival": "07:51" },
+          { "type": "bus", "departure": "08:13", "arrival": "08:52" },
+          { "type": "bus", "departure": "12:10", "arrival": "12:40" },
+          { "type": "bus", "departure": "12:50", "arrival": "13:20" },
+          { "type": "bus", "departure": "15:10", "arrival": "15:51" },
+          { "type": "bus", "departure": "16:10", "arrival": "16:40" },
+          { "type": "bus", "departure": "17:10", "arrival": "17:40" },
+          { "type": "bus", "departure": "18:10", "arrival": "18:40" },
+          { "type": "bus", "departure": "19:10", "arrival": "19:40" }
+        ]
+      }
+    ],
+    "departures": [
+      {
+        "id": 601,
+        "name": "1",
+        "color": "#da4c9c",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Cheseaux-Noréaz",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 602,
+        "name": "2",
+        "color": "#da4c9c",
+        "isYverdonTerminus": false,
+        "destinations": [
+          {
+            "name": "Yverdon, Pierre de Savoie",
+            "side": "left"
+          },
+          {
+            "name": "Yverdon, Cheminet",
+            "side": "right"
+          }
+        ]
+      },
+      {
+        "id": 603,
+        "name": "3",
+        "color": "#da4c9c",
+        "isYverdonTerminus": false,
+        "destinations": [
+          {
+            "name": "Montagny-près-Yverdon",
+            "side": "left"
+          },
+          {
+            "name": "Yverdon, Bellevue",
+            "side": "right"
+          }
+        ]
+      },
+      {
+        "id": 604,
+        "name": "4",
+        "color": "#da4c9c",
+        "isYverdonTerminus": false,
+        "destinations": [
+          {
+            "name": "Yverdon, Moulins",
+            "side": "left"
+          },
+          {
+            "name": "Yverdon, Maison-Blanche",
+            "side": "right"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "5",
+        "color": "#da4c9c",
+        "isYverdonTerminus": false,
+        "destinations": [
+          {
+            "name": "Yverdon",
+            "side": "left"
+          },
+          {
+            "name": "Yverdon, Le Bey",
+            "side": "right"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "6",
+        "color": "#da4c9c",
+        "isYverdonTerminus": false,
+        "destinations": [
+          {
+            "name": "Yverdon",
+            "side": "left"
+          },
+          {
+            "name": "Yverdon, HEIG-VD",
+            "side": "right"
+          }
+        ]
+      },
+      {
+        "id": 680,
+        "name": "10",
+        "color": "#ffcc00",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Mathod / Orbe",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 650,
+        "name": "10",
+        "color": "#ffcc00",
+        "isYverdonTerminus": false,
+        "destinations": [
+          {
+            "name": "Yverdon",
+            "side": "left"
+          },
+          {
+            "name": "Yvonand / Chêne-Pâquier",
+            "side": "right"
+          }
+        ]
+      },
+      {
+        "id": 611,
+        "name": "11",
+        "color": "#da4c9c",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Chamblon",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 613,
+        "name": "13",
+        "color": "#da4c9c",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Vallorbe",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 620,
+        "name": "20",
+        "color": "#ffcc00",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Grandson / Novalles",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 625,
+        "name": "25",
+        "color": "#ffcc00",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Mauborget / Couvet",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 630,
+        "name": "30",
+        "color": "#ffcc00",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Gorgier-St-Aubin",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 635,
+        "name": "30",
+        "color": "#ffcc00",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Provence",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 31,
+        "name": "31",
+        "color": "#ffcc00",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Grandson",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 675,
+        "name": "40",
+        "color": "#ffcc00",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Suchy",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 670,
+        "name": "45",
+        "color": "#ffcc00",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Echallens",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 665,
+        "name": "50",
+        "color": "#ffcc00",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Bercher",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 660,
+        "name": "55",
+        "color": "#ffcc00",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Thierrens",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 58,
+        "name": "58",
+        "color": "#da4c9c",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Cuarny",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "ICN",
+        "color": "#eb0000",
+        "isYverdonTerminus": false,
+        "destinations": [
+          {
+            "name": "Lausanne",
+            "side": "left"
+          },
+          {
+            "name": "Zürich-Flughafen",
+            "side": "right"
+          }
+        ]
+      },
+      {
+        "id": 51,
+        "name": "ICN",
+        "color": "#eb0000",
+        "isYverdonTerminus": false,
+        "destinations": [
+          {
+            "name": "Lausanne",
+            "side": "left"
+          },
+          {
+            "name": "Basel SBB",
+            "side": "right"
+          }
+        ]
+      },
+      {
+        "id": 52,
+        "name": "ICN",
+        "color": "#eb0000",
+        "isYverdonTerminus": false,
+        "destinations": [
+          {
+            "name": "Genève-Aéroport",
+            "side": "left"
+          },
+          {
+            "name": "Zürich-Flughafen",
+            "side": "right"
+          }
+        ]
+      },
+      {
+        "id": 53,
+        "name": "ICN",
+        "color": "#eb0000",
+        "isYverdonTerminus": false,
+        "destinations": [
+          {
+            "name": "Genève-Aéroport",
+            "side": "left"
+          },
+          {
+            "name": "Basel SBB",
+            "side": "right"
+          }
+        ]
+      },
+      {
+        "id": 212,
+        "name": "R",
+        "color": "#da4c9c",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Ste-Croix",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "S1",
+        "color": "#eb0000",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Lausanne",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "S11",
+        "color": "#eb0000",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Lausanne",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 30,
+        "name": "S30",
+        "color": "#eb0000",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Fribourg/Freiburg",
+            "side": ""
+          }
+        ]
+      }
+    ],
+    "travel_times": [
+      {
+        "destination": "Orbe",
+        "duration_minutes": 23
+      },
+      {
+        "destination": "Thierrens",
+        "duration_minutes": 37
+      },
+      {
+        "destination": "Ste-Croix",
+        "duration_minutes": 36
+      },
+      {
+        "destination": "Echallens",
+        "duration_minutes": 30
+      },
+      {
+        "destination": "Neuchâtel",
+        "duration_minutes": 19
+      },
+      {
+        "destination": "Lausanne",
+        "duration_minutes": 20
+      },
+      {
+        "destination": "Payerne",
+        "duration_minutes": 27
+      },
+      {
+        "destination": "Grandson",
+        "duration_minutes": 8
+      },
+      {
+        "destination": "Y-Parc",
+        "duration_minutes": 7
+      },
+      {
+        "destination": "Gymnase",
+        "duration_minutes": 7
+      }
+    ]
+  },
+
+  {
+    "year": 2016,
+    "comments": {
+      "relations":    { "visu_name": "Relations", "title": "Une offre en pleine expansion", "content": "Dix ans plus tard, le réseau s'est densifié. De nouvelles lignes de bus cadencées relient Yverdon aux communes voisines, et la fréquence des trains vers Lausanne a doublé. Le réseau urbain se structure autour de la gare comme pôle d'échange central." },
+      "departures":   { "visu_name": "Départs", "title": "La cadence s'installe", "content": "En 2016, les départs se multiplient et s'organisent autour d'horaires cadencés. Le nombre de lignes actives a augmenté, les premières courses arrivent plus tôt et les dernières partent plus tard. La lisibilité des horaires s'améliore nettement pour les usagers." },
+      "travel_times": { "visu_name": "Temps de trajet", "title": "Des gains sensibles vers les grands centres", "content": "L'amélioration des correspondances à Lausanne et l'augmentation des fréquences réduisent significativement les temps de trajet. Yverdon se rapproche de Lausanne en moins de 40 minutes, et les correspondances vers Berne ou Genève s'enchaînent mieux." }
+    },
+    "relations": [
+      {
+        "title": "Orbe",
+        "courses": [
+          { "type": "bus", "departure": "05:12", "arrival": "05:36" },
+          { "type": "bus", "departure": "05:42", "arrival": "06:06" },
+          { "type": "bus", "departure": "06:12", "arrival": "06:36" },
+          { "type": "bus", "departure": "06:42", "arrival": "07:06" },
+          { "type": "bus", "departure": "07:12", "arrival": "07:36" },
+          { "type": "bus", "departure": "07:42", "arrival": "08:06" },
+          { "type": "bus", "departure": "08:12", "arrival": "08:36" },
+          { "type": "bus", "departure": "08:42", "arrival": "09:06" },
+          { "type": "bus", "departure": "09:42", "arrival": "10:06" },
+          { "type": "bus", "departure": "10:42", "arrival": "11:06" },
+          { "type": "bus", "departure": "11:52", "arrival": "12:16" },
+          { "type": "bus", "departure": "12:12", "arrival": "12:37" },
+          { "type": "bus", "departure": "12:42", "arrival": "13:06" },
+          { "type": "bus", "departure": "13:42", "arrival": "14:06" },
+          { "type": "bus", "departure": "14:42", "arrival": "15:06" },
+          { "type": "bus", "departure": "15:12", "arrival": "15:36" },
+          { "type": "bus", "departure": "15:42", "arrival": "16:06" },
+          { "type": "bus", "departure": "16:12", "arrival": "16:36" },
+          { "type": "bus", "departure": "16:42", "arrival": "17:06" },
+          { "type": "bus", "departure": "17:12", "arrival": "17:36" },
+          { "type": "bus", "departure": "17:42", "arrival": "18:06" },
+          { "type": "bus", "departure": "18:12", "arrival": "18:36" },
+          { "type": "bus", "departure": "18:42", "arrival": "19:06" },
+          { "type": "bus", "departure": "19:42", "arrival": "20:06" },
+          { "type": "bus", "departure": "20:42", "arrival": "21:06" },
+          { "type": "bus", "departure": "21:42", "arrival": "22:06" },
+          { "type": "bus", "departure": "22:42", "arrival": "23:06" },
+          { "type": "bus", "departure": "23:42", "arrival": "00:06" },
+          { "type": "bus", "departure": "00:42", "arrival": "01:06" }
+        ]
+      },
+      {
+        "title": "Thierrens",
+        "courses": [
+          { "type": "bus", "departure": "05:48", "arrival": "06:26" },
+          { "type": "bus", "departure": "06:48", "arrival": "07:26" },
+          { "type": "bus", "departure": "07:48", "arrival": "08:26" },
+          { "type": "bus", "departure": "09:48", "arrival": "10:26" },
+          { "type": "bus", "departure": "10:48", "arrival": "11:26" },
+          { "type": "bus", "departure": "11:30", "arrival": "12:08" },
+          { "type": "bus", "departure": "12:48", "arrival": "13:26" },
+          { "type": "bus", "departure": "13:48", "arrival": "14:26" },
+          { "type": "bus", "departure": "14:48", "arrival": "15:26" },
+          { "type": "bus", "departure": "15:48", "arrival": "16:26" },
+          { "type": "bus", "departure": "16:48", "arrival": "17:26" },
+          { "type": "bus", "departure": "17:48", "arrival": "18:26" },
+          { "type": "bus", "departure": "18:18", "arrival": "18:56" },
+          { "type": "bus", "departure": "18:48", "arrival": "19:26" },
+          { "type": "bus", "departure": "19:18", "arrival": "20:02" },
+          { "type": "bus", "departure": "19:48", "arrival": "20:26" },
+          { "type": "bus", "departure": "20:18", "arrival": "21:02" }
+        ]
+      },
+      {
+        "title": "Ste-Croix",
+        "courses": [
+          { "type": "train", "departure": "05:34", "arrival": "06:11" },
+          { "type": "train", "departure": "06:04", "arrival": "06:41" },
+          { "type": "train", "departure": "06:34", "arrival": "07:11" },
+          { "type": "train", "departure": "07:04", "arrival": "07:41" },
+          { "type": "train", "departure": "07:34", "arrival": "08:11" },
+          { "type": "train", "departure": "08:04", "arrival": "08:41" },
+          { "type": "train", "departure": "08:34", "arrival": "09:11" },
+          { "type": "train", "departure": "09:04", "arrival": "09:41" },
+          { "type": "train", "departure": "09:34", "arrival": "10:11" },
+          { "type": "train", "departure": "10:04", "arrival": "10:41" },
+          { "type": "train", "departure": "10:34", "arrival": "11:11" },
+          { "type": "train", "departure": "11:04", "arrival": "11:41" },
+          { "type": "train", "departure": "11:34", "arrival": "12:11" },
+          { "type": "train", "departure": "12:04", "arrival": "12:41" },
+          { "type": "train", "departure": "12:34", "arrival": "13:11" },
+          { "type": "train", "departure": "13:04", "arrival": "13:41" },
+          { "type": "train", "departure": "13:34", "arrival": "14:11" },
+          { "type": "train", "departure": "14:34", "arrival": "15:11" },
+          { "type": "train", "departure": "15:34", "arrival": "16:11" },
+          { "type": "train", "departure": "16:04", "arrival": "16:41" },
+          { "type": "train", "departure": "16:34", "arrival": "17:11" },
+          { "type": "train", "departure": "17:04", "arrival": "17:41" },
+          { "type": "train", "departure": "17:34", "arrival": "18:11" },
+          { "type": "train", "departure": "18:04", "arrival": "18:41" },
+          { "type": "train", "departure": "18:34", "arrival": "19:11" },
+          { "type": "train", "departure": "19:04", "arrival": "19:41" },
+          { "type": "train", "departure": "19:34", "arrival": "20:11" },
+          { "type": "train", "departure": "20:34", "arrival": "21:11" },
+          { "type": "train", "departure": "21:34", "arrival": "22:11" },
+          { "type": "train", "departure": "22:34", "arrival": "23:11" },
+          { "type": "train", "departure": "23:34", "arrival": "00:11" },
+          { "type": "train", "departure": "00:34", "arrival": "01:11" }
+        ]
+      },
+      {
+        "title": "Echallens",
+        "courses": [
+          { "type": "bus", "departure": "05:55", "arrival": "06:26" },
+          { "type": "bus", "departure": "06:25", "arrival": "06:56" },
+          { "type": "bus", "departure": "06:55", "arrival": "07:26" },
+          { "type": "bus", "departure": "07:25", "arrival": "07:56" },
+          { "type": "bus", "departure": "07:55", "arrival": "08:26" },
+          { "type": "bus", "departure": "08:25", "arrival": "08:56" },
+          { "type": "bus", "departure": "11:25", "arrival": "11:56" },
+          { "type": "bus", "departure": "12:25", "arrival": "12:56" },
+          { "type": "bus", "departure": "13:25", "arrival": "13:56" },
+          { "type": "bus", "departure": "14:25", "arrival": "14:56" },
+          { "type": "bus", "departure": "15:25", "arrival": "15:56" },
+          { "type": "bus", "departure": "16:25", "arrival": "16:56" },
+          { "type": "bus", "departure": "16:55", "arrival": "17:26" },
+          { "type": "bus", "departure": "17:25", "arrival": "17:56" },
+          { "type": "bus", "departure": "17:55", "arrival": "18:26" },
+          { "type": "bus", "departure": "18:25", "arrival": "18:56" },
+          { "type": "bus", "departure": "18:55", "arrival": "19:26" },
+          { "type": "bus", "departure": "19:25", "arrival": "19:56" },
+          { "type": "bus", "departure": "20:25", "arrival": "20:56" },
+          { "type": "bus", "departure": "21:25", "arrival": "21:56" }
+        ]
+      }
+    ],
+    "departures": [
+      {
+        "id": 601,
+        "name": "601",
+        "color": "#da4c9c",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Cheseaux-Noréaz",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 602,
+        "name": "602",
+        "color": "#da4c9c",
+        "isYverdonTerminus": false,
+        "destinations": [
+          {
+            "name": "Montagny-près-Yverdon",
+            "side": "left"
+          },
+          {
+            "name": "Yverdon, chemin de la Chèvre",
+            "side": "right"
+          }
+        ]
+      },
+      {
+        "id": 603,
+        "name": "603",
+        "color": "#da4c9c",
+        "isYverdonTerminus": false,
+        "destinations": [
+          {
+            "name": "Yverdon, Blancherie",
+            "side": "left"
+          },
+          {
+            "name": "Yverdon, Bellevue",
+            "side": "right"
+          }
+        ]
+      },
+      {
+        "id": 604,
+        "name": "604",
+        "color": "#da4c9c",
+        "isYverdonTerminus": false,
+        "destinations": [
+          {
+            "name": "Yverdon, Les Moulins",
+            "side": "left"
+          },
+          {
+            "name": "Yverdon, Maison Blanche",
+            "side": "right"
+          }
+        ]
+      },
+      {
+        "id": 605,
+        "name": "605",
+        "color": "#da4c9c",
+        "isYverdonTerminus": false,
+        "destinations": [
+          {
+            "name": "Yverdon, Près du Lac",
+            "side": "left"
+          },
+          {
+            "name": "Yverdon, Pierre de Savoie",
+            "side": "right"
+          }
+        ]
+      },
+      {
+        "id": 611,
+        "name": "611",
+        "color": "#da4c9c",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Champvent",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 613,
+        "name": "613",
+        "color": "#da4c9c",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Vallorbe",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 620,
+        "name": "620",
+        "color": "#ffcc00",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Grandson / Vuitebœuf",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 625,
+        "name": "625",
+        "color": "#ffcc00",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Mauborget",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 630,
+        "name": "630",
+        "color": "#ffcc00",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Gorgier-St-Aubin",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 635,
+        "name": "635",
+        "color": "#ffcc00",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Provence",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 650,
+        "name": "650",
+        "color": "#ffcc00",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Yvonand / Démoret",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 660,
+        "name": "660",
+        "color": "#ffcc00",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Thierrens / Moudon",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 661,
+        "name": "661",
+        "color": "#ffcc00",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Donneloye / Combremont-le-Grand",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 665,
+        "name": "665",
+        "color": "#ffcc00",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Bercher",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 670,
+        "name": "670",
+        "color": "#ffcc00",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Echallens",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 675,
+        "name": "675",
+        "color": "#ffcc00",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Chavornay",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 680,
+        "name": "680",
+        "color": "#ffcc00",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Orbe / Arnex / Croy",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "ICN",
+        "color": "#eb0000",
+        "isYverdonTerminus": false,
+        "destinations": [
+          {
+            "name": "Lausanne",
+            "side": "left"
+          },
+          {
+            "name": "Zürich-Flughafen",
+            "side": "right"
+          }
+        ]
+      },
+      {
+        "id": 52,
+        "name": "ICN",
+        "color": "#eb0000",
+        "isYverdonTerminus": false,
+        "destinations": [
+          {
+            "name": "Genève-Aéroport",
+            "side": "left"
+          },
+          {
+            "name": "Zürich HB",
+            "side": "right"
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "name": "R",
+        "color": "#eb0000",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Neuchâtel",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 212,
+        "name": "R",
+        "color": "#da4c9c",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Ste-Croix",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "S1",
+        "color": "#eb0000",
+        "isYverdonTerminus": false,
+        "destinations": [
+          {
+            "name": "Grandson",
+            "side": "left"
+          },
+          {
+            "name": "Lausanne",
+            "side": "right"
+          }
+        ]
+      },
+      {
+        "id": 30,
+        "name": "S30",
+        "color": "#eb0000",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Fribourg/Freiburg",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "S5",
+        "color": "#eb0000",
+        "isYverdonTerminus": false,
+        "destinations": [
+          {
+            "name": "Grandson",
+            "side": "left"
+          },
+          {
+            "name": "Palézieux",
+            "side": "right"
+          }
+        ]
+      }
+    ],
+    "travel_times": [
+      {
+        "destination": "Orbe",
+        "duration_minutes": 24
+      },
+      {
+        "destination": "Thierrens",
+        "duration_minutes": 38
+      },
+      {
+        "destination": "Ste-Croix",
+        "duration_minutes": 37
+      },
+      {
+        "destination": "Echallens",
+        "duration_minutes": 31
+      },
+      {
+        "destination": "Neuchâtel",
+        "duration_minutes": 18
+      },
+      {
+        "destination": "Lausanne",
+        "duration_minutes": 21
+      },
+      {
+        "destination": "Payerne",
+        "duration_minutes": 25
+      },
+      {
+        "destination": "Grandson",
+        "duration_minutes": 4
+      },
+      {
+        "destination": "Y-Parc",
+        "duration_minutes": 9
+      },
+      {
+        "destination": "Gymnase",
+        "duration_minutes": 8
+      }
+    ]
+  },
+
+  {
+    "year": 2026,
+    "comments": {
+      "relations":    { "visu_name": "Relations", "title": "Un réseau tourné vers la mobilité douce", "content": "En 2026, Yverdon s'affirme comme un nœud régional de transport. Les nouvelles lignes à haut niveau de service (BHNS) complètent le RER vaudois, et les connexions intermodales (vélo, covoiturage) sont intégrées aux horaires. La voiture individuelle recule dans les usages." },
+      "departures":   { "visu_name": "Départs", "title": "Une offre quasi continue", "content": "Le réseau de départs 2026 approche d'une offre en continu sur les axes principaux. Les fréquences atteignent 7 à 10 minutes sur les lignes les plus chargées, et la nuit, des courses assurent les retours tardifs les week-ends. L'offre TP rivalise désormais avec la voiture pour les trajets du quotidien." },
+      "travel_times": { "visu_name": "Temps de trajet", "title": "Yverdon, à moins de 30 minutes de Lausanne", "content": "Grâce aux améliorations infrastructurelles et à la suppression de certains arrêts intermédiaires, le trajet Yverdon–Lausanne descend sous les 30 minutes. Les correspondances vers Berne, Genève et Neuchâtel s'effectuent sans attente significative, faisant d'Yverdon un point de départ aussi compétitif que la voiture." }
+    },
+    "relations": [
+      {
+        "title": "Orbe",
+        "courses": [
+          { "type": "bus", "departure": "05:07", "arrival": "05:33" },
+          { "type": "bus", "departure": "05:22", "arrival": "05:47" },
+          { "type": "bus", "departure": "05:37", "arrival": "06:03" },
+          { "type": "bus", "departure": "06:07", "arrival": "06:33" },
+          { "type": "bus", "departure": "06:22", "arrival": "06:47" },
+          { "type": "bus", "departure": "06:37", "arrival": "07:03" },
+          { "type": "bus", "departure": "07:07", "arrival": "07:33" },
+          { "type": "bus", "departure": "07:22", "arrival": "07:47" },
+          { "type": "bus", "departure": "07:37", "arrival": "08:03" },
+          { "type": "bus", "departure": "08:07", "arrival": "08:33" },
+          { "type": "bus", "departure": "08:22", "arrival": "08:47" },
+          { "type": "bus", "departure": "08:37", "arrival": "09:03" },
+          { "type": "bus", "departure": "09:07", "arrival": "09:33" },
+          { "type": "bus", "departure": "09:37", "arrival": "10:03" },
+          { "type": "bus", "departure": "10:07", "arrival": "10:33" },
+          { "type": "bus", "departure": "10:37", "arrival": "11:03" },
+          { "type": "bus", "departure": "11:07", "arrival": "11:33" },
+          { "type": "bus", "departure": "11:22", "arrival": "11:47" },
+          { "type": "bus", "departure": "11:37", "arrival": "12:03" },
+          { "type": "bus", "departure": "12:07", "arrival": "12:33" },
+          { "type": "bus", "departure": "12:22", "arrival": "12:47" },
+          { "type": "bus", "departure": "12:37", "arrival": "13:03" },
+          { "type": "bus", "departure": "13:07", "arrival": "13:33" },
+          { "type": "bus", "departure": "13:22", "arrival": "13:47" },
+          { "type": "bus", "departure": "13:37", "arrival": "14:03" },
+          { "type": "bus", "departure": "14:07", "arrival": "14:33" },
+          { "type": "bus", "departure": "14:37", "arrival": "15:03" },
+          { "type": "bus", "departure": "15:07", "arrival": "15:33" },
+          { "type": "bus", "departure": "15:22", "arrival": "15:47" },
+          { "type": "bus", "departure": "15:37", "arrival": "16:03" },
+          { "type": "bus", "departure": "16:07", "arrival": "16:33" },
+          { "type": "bus", "departure": "16:22", "arrival": "16:47" },
+          { "type": "bus", "departure": "16:37", "arrival": "17:03" },
+          { "type": "bus", "departure": "17:07", "arrival": "17:33" },
+          { "type": "bus", "departure": "17:22", "arrival": "17:47" },
+          { "type": "bus", "departure": "17:37", "arrival": "18:03" },
+          { "type": "bus", "departure": "18:07", "arrival": "18:33" },
+          { "type": "bus", "departure": "18:22", "arrival": "18:47" },
+          { "type": "bus", "departure": "18:37", "arrival": "19:03" },
+          { "type": "bus", "departure": "19:07", "arrival": "19:33" },
+          { "type": "bus", "departure": "19:22", "arrival": "19:47" },
+          { "type": "bus", "departure": "19:37", "arrival": "20:03" },
+          { "type": "bus", "departure": "20:07", "arrival": "20:33" },
+          { "type": "bus", "departure": "20:37", "arrival": "21:03" },
+          { "type": "bus", "departure": "21:37", "arrival": "22:03" },
+          { "type": "bus", "departure": "22:37", "arrival": "23:03" },
+          { "type": "bus", "departure": "23:37", "arrival": "00:03" },
+          { "type": "bus", "departure": "00:37", "arrival": "01:03" }
+        ]
+      },
+      {
+        "title": "Thierrens",
+        "courses": [
+          { "type": "bus", "departure": "05:49", "arrival": "06:28" },
+          { "type": "bus", "departure": "06:49", "arrival": "07:28" },
+          { "type": "bus", "departure": "07:19", "arrival": "07:58" },
+          { "type": "bus", "departure": "07:49", "arrival": "08:28" },
+          { "type": "bus", "departure": "08:19", "arrival": "08:58" },
+          { "type": "bus", "departure": "09:49", "arrival": "10:28" },
+          { "type": "bus", "departure": "11:19", "arrival": "11:58" },
+          { "type": "bus", "departure": "12:49", "arrival": "13:28" },
+          { "type": "bus", "departure": "14:19", "arrival": "14:58" },
+          { "type": "bus", "departure": "15:49", "arrival": "16:28" },
+          { "type": "bus", "departure": "16:19", "arrival": "16:58" },
+          { "type": "bus", "departure": "16:49", "arrival": "17:28" },
+          { "type": "bus", "departure": "17:19", "arrival": "17:58" },
+          { "type": "bus", "departure": "17:49", "arrival": "18:28" },
+          { "type": "bus", "departure": "18:49", "arrival": "19:28" },
+          { "type": "bus", "departure": "19:49", "arrival": "20:28" },
+          { "type": "bus", "departure": "20:49", "arrival": "21:28" },
+          { "type": "bus", "departure": "21:49", "arrival": "22:28" }
+        ]
+      },
+      {
+        "title": "Ste-Croix",
+        "courses": [
+          { "type": "train", "departure": "04:35", "arrival": "05:10" },
+          { "type": "train", "departure": "05:01", "arrival": "05:36" },
+          { "type": "train", "departure": "05:33", "arrival": "06:06" },
+          { "type": "train", "departure": "06:03", "arrival": "06:36" },
+          { "type": "train", "departure": "06:33", "arrival": "07:06" },
+          { "type": "train", "departure": "07:03", "arrival": "07:36" },
+          { "type": "train", "departure": "07:33", "arrival": "08:06" },
+          { "type": "train", "departure": "08:03", "arrival": "08:36" },
+          { "type": "train", "departure": "08:33", "arrival": "09:06" },
+          { "type": "train", "departure": "09:33", "arrival": "10:06" },
+          { "type": "train", "departure": "10:33", "arrival": "11:06" },
+          { "type": "train", "departure": "11:03", "arrival": "11:36" },
+          { "type": "train", "departure": "11:33", "arrival": "12:06" },
+          { "type": "train", "departure": "12:03", "arrival": "12:36" },
+          { "type": "train", "departure": "12:33", "arrival": "13:06" },
+          { "type": "train", "departure": "13:03", "arrival": "13:36" },
+          { "type": "train", "departure": "13:33", "arrival": "14:06" },
+          { "type": "train", "departure": "14:33", "arrival": "15:06" },
+          { "type": "train", "departure": "15:33", "arrival": "16:06" },
+          { "type": "train", "departure": "16:03", "arrival": "16:36" },
+          { "type": "train", "departure": "16:33", "arrival": "17:06" },
+          { "type": "train", "departure": "17:03", "arrival": "17:36" },
+          { "type": "train", "departure": "17:33", "arrival": "18:06" },
+          { "type": "train", "departure": "18:03", "arrival": "18:36" },
+          { "type": "train", "departure": "18:33", "arrival": "19:06" },
+          { "type": "train", "departure": "19:03", "arrival": "19:36" },
+          { "type": "train", "departure": "19:33", "arrival": "20:06" },
+          { "type": "train", "departure": "20:03", "arrival": "20:36" },
+          { "type": "train", "departure": "20:33", "arrival": "21:06" },
+          { "type": "train", "departure": "21:35", "arrival": "22:10" },
+          { "type": "train", "departure": "22:35", "arrival": "23:10" },
+          { "type": "train", "departure": "23:35", "arrival": "00:10" },
+          { "type": "train", "departure": "00:35", "arrival": "01:10" }
+        ]
+      },
+      {
+        "title": "Echallens",
+        "courses": [
+          { "type": "bus", "departure": "05:40", "arrival": "06:13" },
+          { "type": "bus", "departure": "06:10", "arrival": "06:43" },
+          { "type": "bus", "departure": "06:40", "arrival": "07:13" },
+          { "type": "bus", "departure": "07:10", "arrival": "07:43" },
+          { "type": "bus", "departure": "07:40", "arrival": "08:13" },
+          { "type": "bus", "departure": "08:10", "arrival": "08:43" },
+          { "type": "bus", "departure": "08:40", "arrival": "09:13" },
+          { "type": "bus", "departure": "09:10", "arrival": "09:43" },
+          { "type": "bus", "departure": "10:10", "arrival": "10:43" },
+          { "type": "bus", "departure": "11:10", "arrival": "11:43" },
+          { "type": "bus", "departure": "12:10", "arrival": "12:43" },
+          { "type": "bus", "departure": "12:40", "arrival": "13:13" },
+          { "type": "bus", "departure": "13:10", "arrival": "13:43" },
+          { "type": "bus", "departure": "14:10", "arrival": "14:43" },
+          { "type": "bus", "departure": "15:10", "arrival": "15:43" },
+          { "type": "bus", "departure": "15:40", "arrival": "16:13" },
+          { "type": "bus", "departure": "16:10", "arrival": "16:43" },
+          { "type": "bus", "departure": "16:40", "arrival": "17:13" },
+          { "type": "bus", "departure": "17:10", "arrival": "17:43" },
+          { "type": "bus", "departure": "17:40", "arrival": "18:13" },
+          { "type": "bus", "departure": "18:10", "arrival": "18:43" },
+          { "type": "bus", "departure": "18:40", "arrival": "19:13" },
+          { "type": "bus", "departure": "19:10", "arrival": "19:43" },
+          { "type": "bus", "departure": "20:10", "arrival": "20:43" },
+          { "type": "bus", "departure": "21:10", "arrival": "21:43" },
+          { "type": "bus", "departure": "22:40", "arrival": "23:13" }
+        ]
+      }
+    ],
+    "departures": [
+      {
+        "id": 601,
+        "name": "601",
+        "color": "#da4c9c",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Cheseaux-Noréaz",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 602,
+        "name": "602",
+        "color": "#da4c9c",
+        "isYverdonTerminus": false,
+        "destinations": [
+          {
+            "name": "Montagny-près-Yverdon",
+            "side": "left"
+          },
+          {
+            "name": "Yverdon, chemin de la Chèvre",
+            "side": "right"
+          }
+        ]
+      },
+      {
+        "id": 603,
+        "name": "603",
+        "color": "#da4c9c",
+        "isYverdonTerminus": false,
+        "destinations": [
+          {
+            "name": "Yverdon, Blancherie",
+            "side": "left"
+          },
+          {
+            "name": "Yverdon, Bellevue",
+            "side": "right"
+          }
+        ]
+      },
+      {
+        "id": 604,
+        "name": "604",
+        "color": "#da4c9c",
+        "isYverdonTerminus": false,
+        "destinations": [
+          {
+            "name": "Yverdon, Les Moulins",
+            "side": "left"
+          },
+          {
+            "name": "Yverdon, Maison Blanche",
+            "side": "right"
+          }
+        ]
+      },
+      {
+        "id": 605,
+        "name": "605",
+        "color": "#da4c9c",
+        "isYverdonTerminus": false,
+        "destinations": [
+          {
+            "name": "Yverdon, Près du Lac",
+            "side": "left"
+          },
+          {
+            "name": "Yverdon, Y-Parc/Découvertes",
+            "side": "right"
+          }
+        ]
+      },
+      {
+        "id": 611,
+        "name": "611",
+        "color": "#da4c9c",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Champvent",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 613,
+        "name": "613",
+        "color": "#da4c9c",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Vallorbe / Le Brassus",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 620,
+        "name": "620",
+        "color": "#ffcc00",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Grandson / Vuitebœuf",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 625,
+        "name": "625",
+        "color": "#ffcc00",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Mauborget",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 630,
+        "name": "630",
+        "color": "#ffcc00",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Gorgier-St-Aubin",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 635,
+        "name": "635",
+        "color": "#ffcc00",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Provence",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 650,
+        "name": "650",
+        "color": "#ffcc00",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Yvonand / Yverdon",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 651,
+        "name": "651",
+        "color": "#ffcc00",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Yvonand / Yverdon",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 660,
+        "name": "660",
+        "color": "#ffcc00",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Thierrens",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 661,
+        "name": "661",
+        "color": "#ffcc00",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Combremont-le-Petit / Granges-près-Marnand",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 665,
+        "name": "665",
+        "color": "#ffcc00",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Bercher",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 670,
+        "name": "670",
+        "color": "#ffcc00",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Echallens / Froideville",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 675,
+        "name": "675",
+        "color": "#ffcc00",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Chavornay",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 680,
+        "name": "680",
+        "color": "#ffcc00",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Orbe",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 681,
+        "name": "681",
+        "color": "#ffcc00",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Arnex",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 682,
+        "name": "682",
+        "color": "#ffcc00",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Arnex",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 212,
+        "name": "B12",
+        "color": "#da4c9c",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Valeyres-sous-Montagny",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "IC5",
+        "color": "#eb0000",
+        "isYverdonTerminus": false,
+        "destinations": [
+          {
+            "name": "Lausanne",
+            "side": "left"
+          },
+          {
+            "name": "Rorschach",
+            "side": "right"
+          }
+        ]
+      },
+      {
+        "id": 51,
+        "name": "IC51",
+        "color": "#eb0000",
+        "isYverdonTerminus": false,
+        "destinations": [
+          {
+            "name": "Lausanne",
+            "side": "left"
+          },
+          {
+            "name": "Basel SBB",
+            "side": "right"
+          }
+        ]
+      },
+      {
+        "id": 57,
+        "name": "IR57",
+        "color": "#eb0000",
+        "isYverdonTerminus": false,
+        "destinations": [
+          {
+            "name": "Genève-Aéroport",
+            "side": "left"
+          },
+          {
+            "name": "Neuchâtel",
+            "side": "right"
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "R1",
+        "color": "#eb0000",
+        "isYverdonTerminus": false,
+        "destinations": [
+          {
+            "name": "Grandson",
+            "side": "left"
+          },
+          {
+            "name": "Bex / St-Maurice",
+            "side": "right"
+          }
+        ]
+      },
+      {
+        "id": 2121,
+        "name": "R12",
+        "color": "#da4c9c",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Ste-Croix",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "name": "R13",
+        "color": "#eb0000",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Biel/Bienne",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "R2",
+        "color": "#eb0000",
+        "isYverdonTerminus": false,
+        "destinations": [
+          {
+            "name": "Grandson",
+            "side": "left"
+          },
+          {
+            "name": "Bex / St-Maurice",
+            "side": "right"
+          }
+        ]
+      },
+      {
+        "id": 2122,
+        "name": "R22",
+        "color": "#da4c9c",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Ste-Croix",
+            "side": ""
+          }
+        ]
+      },
+      {
+        "id": 30,
+        "name": "S30",
+        "color": "#eb0000",
+        "isYverdonTerminus": true,
+        "destinations": [
+          {
+            "name": "Fribourg/Freiburg",
+            "side": ""
+          }
+        ]
+      }
+    ],
+    "travel_times": [
+      {
+        "destination": "Orbe",
+        "duration_minutes": 26
+      },
+      {
+        "destination": "Thierrens",
+        "duration_minutes": 39
+      },
+      {
+        "destination": "Ste-Croix",
+        "duration_minutes": 36
+      },
+      {
+        "destination": "Echallens",
+        "duration_minutes": 33
+      },
+      {
+        "destination": "Neuchâtel",
+        "duration_minutes": 20
+      },
+      {
+        "destination": "Lausanne",
+        "duration_minutes": 26
+      },
+      {
+        "destination": "Payerne",
+        "duration_minutes": 25
+      },
+      {
+        "destination": "Grandson",
+        "duration_minutes": 5
+      },
+      {
+        "destination": "Y-Parc",
+        "duration_minutes": 8
+      },
+      {
+        "destination": "Gymnase",
+        "duration_minutes": 7
+      }
+    ]
+  }
+]
