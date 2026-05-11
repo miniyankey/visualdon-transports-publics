@@ -1,9 +1,19 @@
-[
-    {
-        "year": 2006, //l'année du fichier
-        "travel_times": [ //toutes les durées par destination
-            { "destination": "Neuchâtel"/*la destination*/, "duration_minutes": 43 /*duree en minute*/ },
-            { "destination": "Vallorbe",  "duration_minutes": 26 },
-        ]
+{
+    "comments": {
+        "relations": {
+            "visu_name": "Relations",
+            "title": "Un réseau tourné vers la mobilité douce",
+            "content": "En 2026, Yverdon s'affirme comme un nœud régional de transport. Les nouvelles lignes à haut niveau de service (BHNS) complètent le RER vaudois, et les connexions intermodales (vélo, covoiturage) sont intégrées aux horaires. La voiture individuelle recule dans les usages."
+        },
+        "departures": {
+            "visu_name": "Départs",
+            "title": "Une offre quasi continue",
+            "content": "Le réseau de départs 2026 approche d'une offre en continu sur les axes principaux. Les fréquences atteignent 7 à 10 minutes sur les lignes les plus chargées, et la nuit, des courses assurent les retours tardifs les week-ends. L'offre TP rivalise désormais avec la voiture pour les trajets du quotidien."
+        },
+        "travel_times": {
+            "visu_name": "Temps de trajet",
+            "title": "Yverdon, à moins de 30 minutes de Lausanne",
+            "content": "Grâce aux améliorations infrastructurelles et à la suppression de certains arrêts intermédiaires, le trajet Yverdon–Lausanne descend sous les 30 minutes. Les correspondances vers Berne, Genève et Neuchâtel s'effectuent sans attente significative, faisant d'Yverdon un point de départ aussi compétitif que la voiture."
         }
-]
+    }
+}
