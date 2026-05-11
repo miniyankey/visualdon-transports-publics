@@ -94,7 +94,7 @@
       {
         "id": 601,
         "name": "1",
-        "color": "#da4c9c",
+        "color": "#c10d0c",
         "isYverdonTerminus": true,
         "destinations": [
           {
@@ -106,7 +106,7 @@
       {
         "id": 602,
         "name": "2",
-        "color": "#da4c9c",
+        "color": "#3b6eaf",
         "isYverdonTerminus": false,
         "destinations": [
           {
@@ -122,7 +122,7 @@
       {
         "id": 603,
         "name": "3",
-        "color": "#da4c9c",
+        "color": "#8ab62f",
         "isYverdonTerminus": false,
         "destinations": [
           {
@@ -138,7 +138,7 @@
       {
         "id": 604,
         "name": "4",
-        "color": "#da4c9c",
+        "color": "#f39803",
         "isYverdonTerminus": false,
         "destinations": [
           {
@@ -152,9 +152,9 @@
         ]
       },
       {
-        "id": 5,
+        "id": 500,
         "name": "5",
-        "color": "#da4c9c",
+        "color": "#fa9aa6",
         "isYverdonTerminus": false,
         "destinations": [
           {
@@ -170,7 +170,7 @@
       {
         "id": 6,
         "name": "6",
-        "color": "#da4c9c",
+        "color": "#8b438f",
         "isYverdonTerminus": false,
         "destinations": [
           {
@@ -214,7 +214,7 @@
       {
         "id": 611,
         "name": "11",
-        "color": "#da4c9c",
+        "color": "#fa9aa6",
         "isYverdonTerminus": true,
         "destinations": [
           {
@@ -226,7 +226,7 @@
       {
         "id": 613,
         "name": "13",
-        "color": "#da4c9c",
+        "color": "#33a6e5",
         "isYverdonTerminus": true,
         "destinations": [
           {
@@ -346,7 +346,7 @@
       {
         "id": 58,
         "name": "58",
-        "color": "#da4c9c",
+        "color": "#ffcc00",
         "isYverdonTerminus": true,
         "destinations": [
           {
@@ -422,7 +422,7 @@
       {
         "id": 212,
         "name": "R",
-        "color": "#da4c9c",
+        "color": "#fa9aa6",
         "isYverdonTerminus": true,
         "destinations": [
           {
@@ -434,7 +434,7 @@
       {
         "id": 1,
         "name": "S1",
-        "color": "#eb0000",
+        "color": "#2d2f84",
         "isYverdonTerminus": true,
         "destinations": [
           {
@@ -446,7 +446,7 @@
       {
         "id": 2,
         "name": "S11",
-        "color": "#eb0000",
+        "color": "#2d2f84",
         "isYverdonTerminus": true,
         "destinations": [
           {
@@ -458,7 +458,7 @@
       {
         "id": 30,
         "name": "S30",
-        "color": "#eb0000",
+        "color": "#2d2f84",
         "isYverdonTerminus": true,
         "destinations": [
           {
@@ -643,7 +643,7 @@
       {
         "id": 601,
         "name": "601",
-        "color": "#da4c9c",
+        "color": "#c10d0c",
         "isYverdonTerminus": true,
         "destinations": [
           {
@@ -655,7 +655,7 @@
       {
         "id": 602,
         "name": "602",
-        "color": "#da4c9c",
+        "color": "#3b6eaf",
         "isYverdonTerminus": false,
         "destinations": [
           {
@@ -671,7 +671,7 @@
       {
         "id": 603,
         "name": "603",
-        "color": "#da4c9c",
+        "color": "#8ab62f",
         "isYverdonTerminus": false,
         "destinations": [
           {
@@ -687,7 +687,7 @@
       {
         "id": 604,
         "name": "604",
-        "color": "#da4c9c",
+        "color": "#f39803",
         "isYverdonTerminus": false,
         "destinations": [
           {
@@ -703,7 +703,7 @@
       {
         "id": 605,
         "name": "605",
-        "color": "#da4c9c",
+        "color": "#8b438f",
         "isYverdonTerminus": false,
         "destinations": [
           {
@@ -719,7 +719,7 @@
       {
         "id": 611,
         "name": "611",
-        "color": "#da4c9c",
+        "color": "#fa9aa6",
         "isYverdonTerminus": true,
         "destinations": [
           {
@@ -731,7 +731,7 @@
       {
         "id": 613,
         "name": "613",
-        "color": "#da4c9c",
+        "color": "#33a6e5",
         "isYverdonTerminus": true,
         "destinations": [
           {
@@ -907,7 +907,7 @@
       {
         "id": 13,
         "name": "R",
-        "color": "#eb0000",
+        "color": "#2d2f84",
         "isYverdonTerminus": true,
         "destinations": [
           {
@@ -919,7 +919,7 @@
       {
         "id": 212,
         "name": "R",
-        "color": "#da4c9c",
+        "color": "#fa9aa6",
         "isYverdonTerminus": true,
         "destinations": [
           {
@@ -931,7 +931,7 @@
       {
         "id": 1,
         "name": "S1",
-        "color": "#eb0000",
+        "color": "#2d2f84",
         "isYverdonTerminus": false,
         "destinations": [
           {
@@ -947,7 +947,7 @@
       {
         "id": 30,
         "name": "S30",
-        "color": "#eb0000",
+        "color": "#2d2f84",
         "isYverdonTerminus": true,
         "destinations": [
           {
@@ -959,7 +959,7 @@
       {
         "id": 2,
         "name": "S5",
-        "color": "#eb0000",
+        "color": "#2d2f84",
         "isYverdonTerminus": false,
         "destinations": [
           {
@@ -1175,7 +1175,7 @@
       {
         "id": 601,
         "name": "601",
-        "color": "#da4c9c",
+        "color": "#c10d0c",
         "isYverdonTerminus": true,
         "destinations": [
           {
@@ -1187,7 +1187,7 @@
       {
         "id": 602,
         "name": "602",
-        "color": "#da4c9c",
+        "color": "#3b6eaf",
         "isYverdonTerminus": false,
         "destinations": [
           {
@@ -1203,7 +1203,7 @@
       {
         "id": 603,
         "name": "603",
-        "color": "#da4c9c",
+        "color": "#8ab62f",
         "isYverdonTerminus": false,
         "destinations": [
           {
@@ -1219,7 +1219,7 @@
       {
         "id": 604,
         "name": "604",
-        "color": "#da4c9c",
+        "color": "#f39803",
         "isYverdonTerminus": false,
         "destinations": [
           {
@@ -1235,7 +1235,7 @@
       {
         "id": 605,
         "name": "605",
-        "color": "#da4c9c",
+        "color": "#8b438f",
         "isYverdonTerminus": false,
         "destinations": [
           {
@@ -1251,7 +1251,7 @@
       {
         "id": 611,
         "name": "611",
-        "color": "#da4c9c",
+        "color": "#fa9aa6",
         "isYverdonTerminus": true,
         "destinations": [
           {
@@ -1263,7 +1263,7 @@
       {
         "id": 613,
         "name": "613",
-        "color": "#da4c9c",
+        "color": "#33a6e5",
         "isYverdonTerminus": true,
         "destinations": [
           {
@@ -1443,7 +1443,7 @@
       {
         "id": 212,
         "name": "B12",
-        "color": "#da4c9c",
+        "color": "#fa9aa6",
         "isYverdonTerminus": true,
         "destinations": [
           {
@@ -1503,7 +1503,7 @@
       {
         "id": 1,
         "name": "R1",
-        "color": "#eb0000",
+        "color": "#2d2f84",
         "isYverdonTerminus": false,
         "destinations": [
           {
@@ -1519,7 +1519,7 @@
       {
         "id": 2121,
         "name": "R12",
-        "color": "#da4c9c",
+        "color": "#fa9aa6",
         "isYverdonTerminus": true,
         "destinations": [
           {
@@ -1531,7 +1531,7 @@
       {
         "id": 13,
         "name": "R13",
-        "color": "#eb0000",
+        "color": "#2d2f84",
         "isYverdonTerminus": true,
         "destinations": [
           {
@@ -1543,7 +1543,7 @@
       {
         "id": 2,
         "name": "R2",
-        "color": "#eb0000",
+        "color": "#2d2f84",
         "isYverdonTerminus": false,
         "destinations": [
           {
@@ -1559,7 +1559,7 @@
       {
         "id": 2122,
         "name": "R22",
-        "color": "#da4c9c",
+        "color": "#fa9aa6",
         "isYverdonTerminus": true,
         "destinations": [
           {
@@ -1571,7 +1571,7 @@
       {
         "id": 30,
         "name": "S30",
-        "color": "#eb0000",
+        "color": "#2d2f84",
         "isYverdonTerminus": true,
         "destinations": [
           {
