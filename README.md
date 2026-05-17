@@ -89,7 +89,20 @@ Toutes les données sont stockées dans `public/data/data_example.json`. Le fich
 ```json
 {
   "year": 2026,
-  "comments": { "relations": {...}, "departures": {...}, "travel_times": {...} },
+  "comments": {
+    "relations":    { "visu_name": "Relations",     "title": "...", "content": "..." },
+    "departures":   { "visu_name": "Départs",       "title": "...", "content": "..." },
+    "travel_times": { "visu_name": "Temps de trajet", "title": "...", "content": "..." }
+  },
+  "relations": [
+    {
+      "title": "Lausanne",
+      "courses": [
+        { "type": "train", "departure": "05:28", "arrival": "05:50" },
+        { "type": "train", "departure": "06:28", "arrival": "06:50" }
+      ]
+    }
+  ],
   "departures": [
     {
       "id": "IR15",
@@ -97,7 +110,7 @@ Toutes les données sont stockées dans `public/data/data_example.json`. Le fich
       "color": "#e84545",
       "isYverdonTerminus": false,
       "destinations": [
-        { "name": "Lausanne", "side": "left", "distance": 29 },
+        { "name": "Lausanne", "side": "left",  "distance": 29 },
         { "name": "Berne",    "side": "right", "distance": 85 }
       ]
     }
