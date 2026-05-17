@@ -126,7 +126,7 @@ Les distances (`distance`) sont exprimées en kilomètres depuis la gare d'Yverd
 ## Sources de données
 
 - **[Archives horaires OFT](https://www.tp-info.ch/fr/horaire-actuel/archives-des-horaires)** — évolution des horaires et cadences
-- **Rapports de gestion Travys** — exploitation, kilométrage, bilan financier
+- **Archives horaires Travys** — lignes urbaines (obtenues par contact direct)
 
 ---
 
