@@ -116,7 +116,6 @@
 /* ── Colonne visualisation (2/3) ── */
 
 .section-viz {
-  background: #f8f9fa;
   border-radius: var(--radius-card);
   min-height: 400px;
   overflow: hidden;

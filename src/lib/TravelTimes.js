@@ -71,7 +71,7 @@ export class TravelTimes {
       if (!yd) continue;
       yd.travel_times.forEach(t => destSet.add(t.destination));
     }
-    const destinations = [...destSet];
+    const destinations = [...destSet].sort((a, b) => _avgDuration(this.data, a) - _avgDuration(this.data, b));
     const nYears = years.length;
     const nDest  = destinations.length;
 
@@ -247,6 +247,14 @@ function _barPath(x, y, w, h, rx) {
     `Q${x + w},${y + h} ${x + w - r},${y + h}`,
     `H${x} Z`,
   ].join(' ');
+}
+
+function _avgDuration(data, dest) {
+  const vals = [2006, 2016, 2026].flatMap(y => {
+    const dur = data.find(d => d.year === y)?.travel_times.find(t => t.destination === dest)?.duration_minutes;
+    return dur != null ? [dur] : [];
+  });
+  return vals.length ? vals.reduce((s, v) => s + v, 0) / vals.length : Infinity;
 }
 
 function _contrastColor(hex) {

@@ -18,7 +18,8 @@ import * as d3 from "d3";
 const LINE_STROKE = 3;
 const LINE_NEW    = 3;
 const BADGE_R     = 7;
-const ARM_W       = 120;
+const ARM_W       = 140;
+const MIN_ARM_W   = 36;
 const ROW_H       = 20;
 const NODE_W      = 30;
 const NUM_TEXT    = 6;
@@ -59,12 +60,13 @@ function buildSlots(data, activeYears) {
 
     if (!refLine.isYverdonTerminus) {
       refLine.destinations.forEach((dest, di) => {
-        const slot = { ...base, slotKey: `${id}-${di}`, destName: dest.name, isPass: true };
+        const slot = { ...base, slotKey: `${id}-${di}`, destName: dest.name, destDistance: dest.distance ?? 0, isPass: true };
         if (dest.side === "left") left.push(slot);
         else right.push(slot);
       });
     } else {
-      const slot = { ...base, slotKey: `${id}`, destName: refLine.destinations[0]?.name ?? "", isPass: false };
+      const d0   = refLine.destinations[0];
+      const slot = { ...base, slotKey: `${id}`, destName: d0?.name ?? "", destDistance: d0?.distance ?? 0, isPass: false };
       if (left.length <= right.length) left.push(slot);
       else right.push(slot);
     }
@@ -80,19 +82,20 @@ function detectChanges(byYear, years) {
   for (let i = 1; i < years.length; i++) {
     const prev = byYear.get(years[i - 1]);
     const curr = byYear.get(years[i]);
-    if (!prev && curr)  { changes.push({ type: "new",     desc: `Nouvelle ligne en ${years[i]}` }); continue; }
-    if (prev  && !curr) { changes.push({ type: "removed", desc: `Supprimée en ${years[i]}` }); continue; }
+    const period = `entre ${years[i - 1]} et ${years[i]}`;
+    if (!prev && curr)  { changes.push({ type: "new",     desc: `Apparue ${period}` }); continue; }
+    if (prev  && !curr) { changes.push({ type: "removed", desc: `Disparue ${period}` }); continue; }
     if (!prev || !curr) continue;
     if (prev.name !== curr.name)
-      changes.push({ type: "rename", desc: `Renommée : ${prev.name} → ${curr.name}` });
+      changes.push({ type: "rename", desc: `Renommée ${period} : ${prev.name} → ${curr.name}` });
     const pd = prev.destinations.map((d) => d.name).join(", ");
     const cd = curr.destinations.map((d) => d.name).join(", ");
     if (pd !== cd)
-      changes.push({ type: "dest", desc: `Destinations : ${pd} → ${cd}` });
+      changes.push({ type: "dest", desc: `Destinations modifiées ${period} : ${pd} → ${cd}` });
     if (prev.isYverdonTerminus !== curr.isYverdonTerminus)
       changes.push({ type: "terminus", desc: curr.isYverdonTerminus
-        ? `Devient terminus à Yverdon en ${years[i]}`
-        : `Passe en ligne traversante en ${years[i]}` });
+        ? `Terminus à Yverdon ${period}`
+        : `Ligne traversante ${period}` });
   }
   return changes;
 }
@@ -142,6 +145,7 @@ export class Departures {
       <span class="visu2-legend-item">
         <span class="visu2-legend-line visu2-legend-line--dashed"></span>Supprimée
       </span>
+      <span class="visu2-legend-note">Longueur proportionnelle à la distance (échelle logarithmique) · Cliquer sur une ligne pour voir son évolution</span>
     `;
     this.container.appendChild(this._legendEl);
 
@@ -160,7 +164,13 @@ export class Departures {
 
     const years = [...this.activeYears].sort((a, b) => a - b);
     const { left, right } = buildSlots(this.data, this.activeYears);
-    const nRows = Math.max(left.length, right.length);
+    left.sort((a, b)  => a.destDistance - b.destDistance);
+    right.sort((a, b) => a.destDistance - b.destDistance);
+    const nRows   = Math.max(left.length, right.length);
+    // Échelle fixe sur l'ensemble des données — 100 % = distance max tous ans confondus
+    const maxDist = Math.max(1, ...this.data.flatMap((yd) =>
+      yd.departures.flatMap((dep) => dep.destinations.map((d) => d.distance ?? 0))
+    ));
 
     const LABEL_W = 130;
     const W       = NODE_W * 2 + ARM_W * 2 + LABEL_W * 2 + 32;
@@ -189,13 +199,13 @@ export class Departures {
     // Lignes gauche
     left.forEach((slot, i) => {
       const y = topY + NODE_PAD + i * ROW_H + ROW_H / 2;
-      this._drawArm(g, slot, "left", y, cx, nodeX, armEndL, ARM_W, LABEL_W, years);
+      this._drawArm(g, slot, "left", y, cx, nodeX, armEndL, ARM_W, LABEL_W, years, maxDist);
     });
 
     // Lignes droite
     right.forEach((slot, i) => {
       const y = topY + NODE_PAD + i * ROW_H + ROW_H / 2;
-      this._drawArm(g, slot, "right", y, cx, cx + NODE_W, armEndR, ARM_W, LABEL_W, years);
+      this._drawArm(g, slot, "right", y, cx, cx + NODE_W, armEndR, ARM_W, LABEL_W, years, maxDist);
     });
 
     // Nœud central (pill)
@@ -233,12 +243,13 @@ export class Departures {
 
   // ─── Dessin d'un bras horizontal ─────────────────────────────
 
-  _drawArm(g, slot, side, y, cx, nodeEdge, armEnd, armW, labelW, years) {
-    const color  = slot.isRemoved ? "#c0c4cc" : slot.refLine.color;
-    const dashed = slot.isRemoved;
-    const thick  = slot.isNew ? LINE_NEW : LINE_STROKE;
-    const isLeft = side === "left";
-    const armTip = isLeft ? armEnd - armW : armEnd + armW;
+  _drawArm(g, slot, side, y, cx, nodeEdge, armEnd, armW, labelW, years, maxDist) {
+    const color   = slot.isRemoved ? "#c0c4cc" : slot.refLine.color;
+    const dashed  = slot.isRemoved;
+    const thick   = slot.isNew ? LINE_NEW : LINE_STROKE;
+    const isLeft  = side === "left";
+    const scaled  = Math.max(MIN_ARM_W, armW * Math.log(1 + slot.destDistance) / Math.log(1 + maxDist));
+    const armTip  = isLeft ? armEnd - scaled : armEnd + scaled;
 
     const grp = g.append("g")
       .attr("class", "visu2-line")
@@ -269,16 +280,20 @@ export class Departures {
       .text(slot.refLine.name);
 
     if (slot.destName) {
-      const labelX = isLeft ? badgeX - BADGE_R - 5 : badgeX + BADGE_R + 5;
+      const labelX  = isLeft ? badgeX - BADGE_R - 5 : badgeX + BADGE_R + 5;
+      const anchor  = isLeft ? "end" : "start";
+      const dimFill = slot.isRemoved ? "#9ca3af" : "#1a1a1a";
+
+      // Nom de la destination
       grp.append("text")
         .attr("x", labelX).attr("y", y)
-        .attr("text-anchor", isLeft ? "end" : "start")
+        .attr("text-anchor", anchor)
         .attr("dominant-baseline", "central")
         .attr("font-family", "Inter Tight, sans-serif")
         .attr("font-size", LEG_TEXT).attr("font-weight", 500)
-        .attr("fill", slot.isRemoved ? "#9ca3af" : "#1a1a1a")
-        .attr("pointer-events", "none")
+        .attr("fill", dimFill)
         .text(_short(slot.destName));
+
     }
 
     const setHighlight = (isSelected, someSelected) => {
@@ -311,21 +326,34 @@ export class Departures {
   // ─── Tooltip flottant ────────────────────────────────────────
 
   _showTooltip(slot, years, event) {
-    const ref     = slot.refLine;
-    const changes = detectChanges(slot.byYear, years);
+    const ref      = slot.refLine;
+    const allYears = [2006, 2016, 2026];
 
-    const yearRows = years.map((y) => {
-      const dep = slot.byYear.get(y);
-      if (!dep) return `<tr>
-        <td class="visu2-year-cell"><span class="visu2-year-dot" style="background:${YEAR_COLORS[y]}"></span>${y}</td>
-        <td colspan="2" class="visu2-absent">Non présente</td>
-      </tr>`;
-      const dests = dep.destinations.map((d) => d.name).join(", ");
-      return `<tr>
-        <td class="visu2-year-cell"><span class="visu2-year-dot" style="background:${YEAR_COLORS[y]}"></span>${y}</td>
-        <td><strong>${dep.name}</strong></td>
-        <td>${dests}</td>
-      </tr>`;
+    // Reconstruit la map complète depuis toutes les données — indépendant des années actives
+    const fullByYear = new Map();
+    for (const yd of this.data) {
+      const dep = yd.departures.find((d) => d.id === slot.id);
+      if (dep) fullByYear.set(yd.year, dep);
+    }
+
+    const changes = detectChanges(fullByYear, allYears);
+
+    const yearRows = allYears.map((y) => {
+      const dep = fullByYear.get(y);
+      const dotStyle = `background:${YEAR_COLORS[y]}`;
+      if (!dep) return `
+        <div class="visu2-year-row">
+          <div class="visu2-year-cell"><span class="visu2-year-dot" style="${dotStyle}"></span>${y}</div>
+          <div class="visu2-absent">Non présente</div>
+        </div>`;
+      const dests = dep.destinations.map((d) =>
+        `<div class="visu2-dest-row">${d.name}${d.distance ? `<span class="visu2-dist">${d.distance} km</span>` : ""}</div>`
+      ).join("");
+      return `
+        <div class="visu2-year-row">
+          <div class="visu2-year-cell"><span class="visu2-year-dot" style="${dotStyle}"></span>${y}</div>
+          <div class="visu2-year-content"><div class="visu2-line-label"><strong>${dep.name}</strong></div>${dests}</div>
+        </div>`;
     }).join("");
 
     const changesHtml = changes.length
@@ -340,7 +368,7 @@ export class Departures {
         <div class="visu2-panel-title">${ref.destinations.map((d) => d.name).join(" ↔ ")}</div>
         <button class="visu2-close visu2-tooltip-close" aria-label="Fermer">✕</button>
       </div>
-      <table class="visu2-table"><tbody>${yearRows}</tbody></table>
+      <div class="visu2-years-list">${yearRows}</div>
       ${changesHtml}
     `;
 
@@ -349,12 +377,12 @@ export class Departures {
       this._deselect();
     });
 
-    // Positionner au curseur en restant dans le conteneur
-    const rect = this.container.getBoundingClientRect();
-    let x = event.clientX - rect.left + 14;
-    let y = event.clientY - rect.top  + 14;
-    if (x + 270 > rect.width)  x = Math.max(4, event.clientX - rect.left - 284);
-    if (y + 220 > rect.height) y = Math.max(4, event.clientY - rect.top  - 234);
+    // Centré horizontalement, dans le tiers supérieur du conteneur
+    const rect       = this.container.getBoundingClientRect();
+    const tipW       = this._tooltip.offsetWidth  || 260;
+    const tipH       = this._tooltip.offsetHeight || 240;
+    const x = Math.max(4, Math.min((rect.width - tipW) / 2, rect.width - tipW - 4));
+    const y = Math.max(4, Math.min(rect.height * 0.12, rect.height - tipH - 4));
 
     this._tooltip.style.left = `${x}px`;
     this._tooltip.style.top  = `${y}px`;

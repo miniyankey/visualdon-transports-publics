@@ -38,10 +38,6 @@ const RAIL_W = RAIL_X1 - RAIL_X0;
 // Les véhicules glissent dans cette zone masquée avant/après le rail visible
 const FADE_W = 48;
 
-// Badge année : cercle de rayon fixe
-const BADGE_R = 10; // rayon
-const BADGE_CX = RAIL_X0 - BADGE_R - 4; // centré juste avant le rail
-
 // Hauteurs
 const SUBROW_HEIGHT = 36;
 const ROW_HEADER_H = 18;
@@ -98,7 +94,9 @@ export class Relations {
     this._defs = null;
     this._staticGrp = null;
     this._vehicleGrp = null;
-    this._fadeGrp = null; // overlay de fondu, toujours au-dessus des véhicules
+    this._fadeGrp = null;
+    this._destLineGrp = null;
+    this._labelGrp = null;
     this._clockEl = null;
     this._relations = [];
     this._vehicles = [];
@@ -157,12 +155,25 @@ export class Relations {
     svg.appendChild(vehicleGrp);
     this._vehicleGrp = vehicleGrp;
 
-    // Groupe de fondu (overlay au-dessus des véhicules, sous les labels)
+    // Groupe de fondu (overlay au-dessus des véhicules)
     const fadeGrp = document.createElementNS("http://www.w3.org/2000/svg", "g");
     fadeGrp.setAttribute("class", "visu1-fade");
     fadeGrp.setAttribute("pointer-events", "none");
     svg.appendChild(fadeGrp);
     this._fadeGrp = fadeGrp;
+
+    // Groupe traits de destination (au-dessus du fondu)
+    const destLineGrp = document.createElementNS("http://www.w3.org/2000/svg", "g");
+    destLineGrp.setAttribute("class", "visu1-dest-lines");
+    destLineGrp.setAttribute("pointer-events", "none");
+    svg.appendChild(destLineGrp);
+    this._destLineGrp = destLineGrp;
+
+    // Groupe labels (tout en haut, jamais masqué)
+    const labelGrp = document.createElementNS("http://www.w3.org/2000/svg", "g");
+    labelGrp.setAttribute("class", "visu1-labels");
+    svg.appendChild(labelGrp);
+    this._labelGrp = labelGrp;
 
     this.container.appendChild(svg);
 
@@ -194,6 +205,8 @@ export class Relations {
     this._updateDefs();
     this._drawStatic();
     this._drawFadeOverlay();
+    this._drawDestLines();
+    this._drawLabels();
     this._buildVehicleElements();
   }
 
@@ -257,28 +270,11 @@ export class Relations {
   // ─── Defs : clipPath + gradients ──────────────────────────────
 
   _updateDefs() {
-    // clipPath élargi : les véhicules peuvent circuler dans la zone de fondu
-    // sans jamais dépasser dans la colonne de texte
     this._defs.innerHTML = `
       <clipPath id="visu1-rail-clip">
-        <rect
-          x="${RAIL_X0 - FADE_W}"
-          y="0"
-          width="${RAIL_W + FADE_W * 2}"
-          height="${this._totalHeight}"
-        />
+        <rect x="0" y="0" width="1000" height="${this._totalHeight}" />
       </clipPath>
-
-      <linearGradient id="visu1-fade-l" x1="0" x2="1" y1="0" y2="0">
-        <stop offset="0%"   stop-color="#ffffff" stop-opacity="1"/>
-        <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
-      </linearGradient>
-      <linearGradient id="visu1-fade-r" x1="0" x2="1" y1="0" y2="0">
-        <stop offset="0%"   stop-color="#ffffff" stop-opacity="0"/>
-        <stop offset="100%" stop-color="#ffffff" stop-opacity="1"/>
-      </linearGradient>
     `;
-
     this._vehicleGrp.setAttribute("clip-path", "url(#visu1-rail-clip)");
   }
 
@@ -287,46 +283,21 @@ export class Relations {
   _drawFadeOverlay() {
     this._fadeGrp.innerHTML = "";
 
-    // Rectangle de fondu gauche : couvre la zone [RAIL_X0 - FADE_W .. RAIL_X0 + FADE_W]
-    // Il masque progressivement les véhicules qui approchent du bord gauche
-    const fadeL = this._svgEl("rect", {
-      x: RAIL_X0 - FADE_W,
-      y: 0,
-      width: FADE_W * 2,
-      height: this._totalHeight,
-      fill: "url(#visu1-fade-l)",
-    });
-    this._fadeGrp.appendChild(fadeL);
-
-    // Rectangle de fondu droit
-    const fadeR = this._svgEl("rect", {
-      x: RAIL_X1 - FADE_W,
-      y: 0,
-      width: FADE_W * 2,
-      height: this._totalHeight,
-      fill: "url(#visu1-fade-r)",
-    });
-    this._fadeGrp.appendChild(fadeR);
-
-    // Colonne opaque gauche (cache totalement les véhicules derrière les labels)
-    const maskL = this._svgEl("rect", {
-      x: 0,
-      y: 0,
-      width: RAIL_X0 - FADE_W,
+    // Colonne opaque gauche — les véhicules glissent derrière la paroi des labels
+    this._fadeGrp.appendChild(this._svgEl("rect", {
+      x: 0, y: 0,
+      width: COL_LEFT_W,
       height: this._totalHeight,
       fill: "#ffffff",
-    });
-    this._fadeGrp.appendChild(maskL);
+    }));
 
-    // Colonne opaque droite
-    const maskR = this._svgEl("rect", {
-      x: RAIL_X1 + FADE_W,
-      y: 0,
-      width: 1000 - RAIL_X1 - FADE_W,
+    // Colonne opaque droite — les véhicules passent derrière la paroi de destination
+    this._fadeGrp.appendChild(this._svgEl("rect", {
+      x: RAIL_X1, y: 0,
+      width: 1000 - RAIL_X1,
       height: this._totalHeight,
       fill: "#ffffff",
-    });
-    this._fadeGrp.appendChild(maskR);
+    }));
   }
 
   // ─── Dessin statique ──────────────────────────────────────────
@@ -347,18 +318,6 @@ export class Relations {
           }),
         );
       }
-
-      // Label destination — à gauche, centré verticalement sur le groupe
-      const groupMidY = rel.groupY + (rel.bottomY - rel.groupY) / 2;
-      this._svgText(this._staticGrp, {
-        x: COL_LEFT_W - 8,
-        y: groupMidY + 5,
-        text: rel.title,
-        anchor: "end",
-        weight: 500,
-        size: 13,
-        fill: "#1a1a1a",
-      });
 
       // Séparateur bas du groupe
       this._staticGrp.appendChild(
@@ -388,25 +347,6 @@ export class Relations {
             "stroke-dasharray": "4 3",
           }),
         );
-
-        // Badge année : cercle parfait
-        this._staticGrp.appendChild(
-          this._svgEl("circle", {
-            cx: BADGE_CX,
-            cy: midY,
-            r: BADGE_R,
-            fill: YEAR_COLORS[grp.year],
-          }),
-        );
-        this._svgText(this._staticGrp, {
-          x: BADGE_CX,
-          y: midY + 4,
-          text: `'${String(grp.year).slice(2)}`,
-          anchor: "middle",
-          weight: 600,
-          size: 9,
-          fill: grp.year === 2026 ? "#1a1a1a" : "#ffffff",
-        });
       }
     }
 
@@ -421,6 +361,79 @@ export class Relations {
         "stroke-width": 1,
       }),
     );
+  }
+
+  // ─── Traits de destination ────────────────────────────────────
+
+  _drawDestLines() {
+    this._destLineGrp.innerHTML = "";
+
+    for (const rel of this._relations) {
+      for (const grp of rel.groups) {
+        const midY = grp.subY + SUBROW_HEIGHT / 2;
+        const halfH = SUBROW_HEIGHT * 0.45;
+
+        // Ligne verticale à RAIL_X1 dans la couleur de l'année
+        this._destLineGrp.appendChild(
+          this._svgEl("line", {
+            x1: RAIL_X1,
+            x2: RAIL_X1,
+            y1: midY - halfH,
+            y2: midY + halfH,
+            stroke: YEAR_COLORS[grp.year],
+            "stroke-width": 2,
+          }),
+        );
+      }
+    }
+  }
+
+  // ─── Labels destination (toujours au-dessus du fondu) ─────────
+
+  _drawLabels() {
+    this._labelGrp.innerHTML = "";
+
+    for (const [ri, rel] of this._relations.entries()) {
+      const groupMidY = rel.groupY + (rel.bottomY - rel.groupY) / 2;
+
+      // Fond alterné dans la colonne label (miroir du fond du rail)
+      this._labelGrp.appendChild(
+        this._svgEl("rect", {
+          x: 0,
+          y: rel.groupY,
+          width: COL_LEFT_W,
+          height: rel.bottomY - rel.groupY,
+          fill: ri % 2 === 0 ? "#f8f9fa" : "#ffffff",
+        }),
+      );
+
+      // Texte destination
+      this._svgText(this._labelGrp, {
+        x: COL_LEFT_W - 8,
+        y: groupMidY + 5,
+        text: rel.title,
+        anchor: "end",
+        weight: 500,
+        size: 13,
+        fill: "#1a1a1a",
+      });
+
+      // Trait coloré par année — petit pill vertical à gauche de chaque sous-rangée
+      for (const grp of rel.groups) {
+        const midY = grp.subY + SUBROW_HEIGHT / 2;
+        this._labelGrp.appendChild(
+          this._svgEl("rect", {
+            x: 5,
+            y: midY - 9,
+            width: 4,
+            height: 18,
+            rx: 2,
+            fill: YEAR_COLORS[grp.year],
+          }),
+        );
+      }
+
+    }
   }
 
   // ─── Éléments véhicules ────────────────────────────────────────
@@ -504,10 +517,6 @@ export class Relations {
   }
 
   _updateVehicles(fraction) {
-    // Rail étendu : les véhicules commencent et finissent dans la zone de fondu
-    const extRailX0 = RAIL_X0 - FADE_W;
-    const extRailW = RAIL_W + FADE_W * 2;
-
     for (const v of this._vehicles) {
       const visible = fraction >= v.depFrac && fraction < v.arrFrac;
       if (!visible) {
@@ -517,8 +526,12 @@ export class Relations {
 
       v.el.setAttribute("display", "");
       const progress = (fraction - v.depFrac) / (v.arrFrac - v.depFrac);
-      // Le trajet complet va de extRailX0 à extRailX0 + extRailW - iconW
-      v.el.setAttribute("x", extRailX0 + progress * (extRailW - v.iconW));
+
+      // À progress=0 : icône entièrement derrière le masque gauche (x = COL_LEFT_W - iconW)
+      // À progress=1 : icône entièrement derrière le masque droit  (x = RAIL_X1)
+      // → pas de dépop : le véhicule est déjà invisible aux deux extrémités
+      const x = COL_LEFT_W - v.iconW + progress * (RAIL_X1 - COL_LEFT_W + v.iconW);
+      v.el.setAttribute("x", x);
       v.el.setAttribute("y", v.midY - ICON_HEIGHT / 2);
     }
   }
