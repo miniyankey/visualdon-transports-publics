@@ -147,6 +147,11 @@ export class Departures {
       </span>
       <span class="visu2-legend-note">Longueur proportionnelle à la distance (échelle logarithmique) · Cliquer sur une ligne pour voir son évolution</span>
     `;
+
+    const sourceBar = document.createElement("div");
+    sourceBar.className = "visu-source-bar";
+    sourceBar.innerHTML = `Sources : <a href="https://www.tp-info.ch/fr/horaire-actuel/archives-des-horaires" target="_blank" rel="noopener">Archives horaires OFT</a>&nbsp;·&nbsp;Archives horaires Travys (lignes urbaines)`;
+    this.container.appendChild(sourceBar);
     this.container.appendChild(this._legendEl);
 
     // Tooltip flottant positionné au curseur lors du clic

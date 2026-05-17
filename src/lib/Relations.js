@@ -195,6 +195,11 @@ export class Relations {
     controls.appendChild(clock);
 
     this.container.appendChild(controls);
+
+    const sourceBar = document.createElement("div");
+    sourceBar.className = "visu-source-bar";
+    sourceBar.innerHTML = `Sources : <a href="https://www.tp-info.ch/fr/horaire-actuel/archives-des-horaires" target="_blank" rel="noopener">Archives horaires OFT</a>&nbsp;·&nbsp;Archives horaires Travys (lignes urbaines)`;
+    this.container.appendChild(sourceBar);
   }
 
   // ─── Reconstruction ────────────────────────────────────────────
